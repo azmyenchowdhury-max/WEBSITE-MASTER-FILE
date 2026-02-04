@@ -1,0 +1,514 @@
+/* ===================================
+   Consultation Page Styles
+   =================================== */
+
+/* Progress Steps */
+.progress-line {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    right: 50px;
+    height: 3px;
+    background: rgba(175, 169, 57, 0.2);
+    z-index: 0;
+}
+
+.progress-line-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #AFA939, #D4CE6A);
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.step-item {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    flex: 1;
+}
+
+.step-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #1A1A1A;
+    border: 3px solid rgba(175, 169, 57, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-weight: 600;
+    color: #888;
+    transition: all 0.3s ease;
+}
+
+.step-item.active .step-circle {
+    background: linear-gradient(135deg, #AFA939, #8B8530);
+    border-color: #AFA939;
+    color: #0A0A0A;
+    box-shadow: 0 0 20px rgba(175, 169, 57, 0.4);
+}
+
+.step-item.completed .step-circle {
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
+    border-color: #4CAF50;
+    color: #fff;
+}
+
+.step-item.completed .step-circle::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.step-label {
+    font-size: 13px;
+    color: #888;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.step-item.active .step-label,
+.step-item.completed .step-label {
+    color: #AFA939;
+}
+
+/* Form Container */
+.consultation-form-wrap {
+    background: linear-gradient(145deg, #141414, #1A1A1A);
+    border: 1px solid rgba(175, 169, 57, 0.15);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Inputs */
+.consultation-form-wrap .form-control,
+.consultation-form-wrap .form-select {
+    background: #0A0A0A;
+    border: 1px solid rgba(175, 169, 57, 0.2);
+    color: #ECECEC;
+    padding: 14px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.consultation-form-wrap .form-control:focus,
+.consultation-form-wrap .form-select:focus {
+    background: #0A0A0A;
+    border-color: #AFA939;
+    box-shadow: 0 0 0 3px rgba(175, 169, 57, 0.15);
+    color: #ECECEC;
+}
+
+.consultation-form-wrap .form-control::placeholder {
+    color: #666;
+}
+
+.consultation-form-wrap .form-label {
+    color: #ECECEC;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.consultation-form-wrap .input-group-text {
+    background: rgba(175, 169, 57, 0.1);
+    border: 1px solid rgba(175, 169, 57, 0.2);
+    border-right: none;
+    color: #AFA939;
+}
+
+.consultation-form-wrap .input-group .form-control {
+    border-left: none;
+}
+
+.consultation-form-wrap .input-group:focus-within .input-group-text {
+    border-color: #AFA939;
+}
+
+/* Consultation Type Cards */
+.consultation-type-card {
+    background: #0A0A0A;
+    border: 2px solid rgba(175, 169, 57, 0.2);
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.consultation-type-card:hover {
+    border-color: rgba(175, 169, 57, 0.5);
+    transform: translateY(-3px);
+}
+
+.consultation-type-card.active {
+    border-color: #AFA939;
+    background: rgba(175, 169, 57, 0.1);
+    box-shadow: 0 0 20px rgba(175, 169, 57, 0.2);
+}
+
+.consultation-type-card i {
+    font-size: 28px;
+    color: #AFA939;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.consultation-type-card span {
+    display: block;
+    font-weight: 600;
+    color: #ECECEC;
+    margin-bottom: 5px;
+}
+
+.consultation-type-card small {
+    display: block;
+    font-size: 11px;
+    color: #888;
+}
+
+/* Payment Method Cards */
+.payment-method-card {
+    background: #0A0A0A;
+    border: 2px solid rgba(175, 169, 57, 0.2);
+    border-radius: 12px;
+    padding: 15px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.payment-method-card:hover {
+    border-color: rgba(175, 169, 57, 0.5);
+    transform: translateY(-2px);
+}
+
+.payment-method-card.active {
+    border-color: #AFA939;
+    background: rgba(175, 169, 57, 0.1);
+    box-shadow: 0 0 15px rgba(175, 169, 57, 0.2);
+}
+
+.payment-method-card img {
+    max-height: 35px;
+    object-fit: contain;
+}
+
+.payment-method-card span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ECECEC;
+}
+
+/* Eligibility Status */
+.eligibility-free {
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    color: #4CAF50;
+}
+
+.eligibility-free i {
+    color: #4CAF50;
+}
+
+.eligibility-free strong {
+    color: #4CAF50;
+}
+
+.eligibility-paid {
+    background: rgba(175, 169, 57, 0.1);
+    border: 1px solid rgba(175, 169, 57, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    color: #AFA939;
+}
+
+.eligibility-paid i {
+    color: #AFA939;
+}
+
+.eligibility-paid strong {
+    color: #AFA939;
+}
+
+/* Success Icon */
+.success-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    animation: successPulse 2s infinite;
+}
+
+.success-icon i {
+    font-size: 50px;
+    color: #fff;
+}
+
+@keyframes successPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(76, 175, 80, 0);
+    }
+}
+
+/* Sidebar Styles */
+.consultation-sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.sidebar-card {
+    background: linear-gradient(145deg, #141414, #1A1A1A);
+    border: 1px solid rgba(175, 169, 57, 0.15);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.sidebar-card h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.sidebar-card .contact-item {
+    display: flex;
+    align-items: center;
+    color: #ECECEC;
+}
+
+.sidebar-card .contact-item a {
+    color: #ECECEC;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar-card .contact-item a:hover {
+    color: #AFA939;
+}
+
+.pricing-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(175, 169, 57, 0.1);
+}
+
+.pricing-item:last-of-type {
+    border-bottom: none;
+}
+
+.security-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.security-list li {
+    padding: 8px 0;
+    color: #ECECEC;
+    font-size: 14px;
+}
+
+.payment-badges {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(175, 169, 57, 0.1);
+}
+
+.payment-badges img {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.payment-badges img:hover {
+    opacity: 1;
+}
+
+/* Secure Badge */
+.secure-badge {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+/* Form Check */
+.consultation-form-wrap .form-check-input {
+    background-color: #0A0A0A;
+    border-color: rgba(175, 169, 57, 0.3);
+}
+
+.consultation-form-wrap .form-check-input:checked {
+    background-color: #AFA939;
+    border-color: #AFA939;
+}
+
+.consultation-form-wrap .form-check-input:focus {
+    box-shadow: 0 0 0 3px rgba(175, 169, 57, 0.15);
+}
+
+/* Toast Notifications */
+.toast-notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 9999;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    max-width: 400px;
+}
+
+.toast-notification.show {
+    transform: translateX(0);
+}
+
+.toast-notification.success {
+    background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+    border-left: 4px solid #4CAF50;
+}
+
+.toast-notification.error {
+    background: linear-gradient(135deg, #4a1a1a 0%, #5a2d2d 100%);
+    border-left: 4px solid #f44336;
+}
+
+.toast-notification.warning {
+    background: linear-gradient(135deg, #4a3a1a 0%, #5a4a2d 100%);
+    border-left: 4px solid #ff9800;
+}
+
+.toast-notification.info {
+    background: linear-gradient(135deg, #1a3a4a 0%, #2d4a5a 100%);
+    border-left: 4px solid #2196F3;
+}
+
+.toast-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+}
+
+.toast-content i {
+    font-size: 20px;
+}
+
+.toast-notification.success .toast-content i { color: #4CAF50; }
+.toast-notification.error .toast-content i { color: #f44336; }
+.toast-notification.warning .toast-content i { color: #ff9800; }
+.toast-notification.info .toast-content i { color: #2196F3; }
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.loading-content {
+    text-align: center;
+    color: #fff;
+}
+
+.loading-content .spinner-border {
+    width: 50px;
+    height: 50px;
+    color: #AFA939;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .consultation-sidebar {
+        position: static;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .consultation-form-wrap {
+        padding: 25px 20px;
+    }
+    
+    .step-label {
+        font-size: 11px;
+    }
+    
+    .step-circle {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+    
+    .progress-line {
+        left: 30px;
+        right: 30px;
+        top: 18px;
+    }
+    
+    .consultation-type-card {
+        padding: 15px 10px;
+        margin-bottom: 10px;
+    }
+    
+    .consultation-type-card i {
+        font-size: 24px;
+    }
+    
+    .payment-method-card {
+        padding: 12px 8px;
+    }
+    
+    .toast-notification {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+    }
+}

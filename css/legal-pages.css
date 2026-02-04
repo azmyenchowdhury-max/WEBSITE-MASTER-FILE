@@ -1,0 +1,418 @@
+/* ===================================
+   Legal Pages Styles
+   Privacy Policy, Terms of Service, Disclaimer
+   =================================== */
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+    padding: 180px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23AFA939' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+}
+
+.page-subtitle {
+    display: inline-block;
+    color: #AFA939;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ECECEC;
+    margin-bottom: 15px;
+}
+
+.page-description {
+    color: #888;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.page-header .breadcrumb {
+    background: transparent;
+    margin-bottom: 0;
+}
+
+.page-header .breadcrumb-item a {
+    color: #AFA939;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.page-header .breadcrumb-item a:hover {
+    color: #D4CE6A;
+}
+
+.page-header .breadcrumb-item.active {
+    color: #888;
+}
+
+.page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: #555;
+}
+
+/* Legal Content */
+.legal-content {
+    background: linear-gradient(145deg, #141414, #1A1A1A);
+    border: 1px solid rgba(175, 169, 57, 0.15);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.legal-intro {
+    background: rgba(175, 169, 57, 0.08);
+    border-left: 4px solid #AFA939;
+    padding: 20px 25px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 40px;
+}
+
+.legal-intro p {
+    margin-bottom: 0;
+    color: #ECECEC;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.legal-intro.alert-box {
+    text-align: center;
+    border-left: none;
+    border: 1px solid rgba(175, 169, 57, 0.3);
+    border-radius: 12px;
+}
+
+.legal-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(175, 169, 57, 0.1);
+}
+
+.legal-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.legal-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #AFA939;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.legal-section h2 i {
+    font-size: 1.2rem;
+}
+
+.legal-section h3 {
+    font-size: 1.1rem;
+    color: #ECECEC;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.legal-section p {
+    color: #ECECEC;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.legal-section ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.legal-section ul li {
+    color: #ECECEC;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.legal-section ul li::marker {
+    color: #AFA939;
+}
+
+.legal-section a {
+    color: #AFA939;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-section a:hover {
+    color: #D4CE6A;
+    text-decoration: underline;
+}
+
+/* Contact Info Box */
+.contact-info-box {
+    background: rgba(175, 169, 57, 0.08);
+    border: 1px solid rgba(175, 169, 57, 0.2);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.contact-info-box p {
+    margin-bottom: 10px;
+}
+
+.contact-info-box p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-info-box a {
+    color: #AFA939;
+}
+
+/* Highlight Box */
+.highlight-box {
+    background: rgba(175, 169, 57, 0.1);
+    border: 1px solid rgba(175, 169, 57, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.highlight-box i {
+    margin-top: 3px;
+}
+
+/* Acknowledgment Box */
+.acknowledgment-box {
+    background: rgba(76, 175, 80, 0.08);
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.acknowledgment-box h2 {
+    color: #4CAF50;
+}
+
+/* Legal Sidebar */
+.legal-sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.sidebar-card {
+    background: linear-gradient(145deg, #141414, #1A1A1A);
+    border: 1px solid rgba(175, 169, 57, 0.15);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.sidebar-card h5 {
+    color: #AFA939;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-card p {
+    color: #ECECEC;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.sidebar-card.highlight {
+    background: linear-gradient(145deg, rgba(175, 169, 57, 0.1), rgba(175, 169, 57, 0.05));
+    border-color: rgba(175, 169, 57, 0.3);
+}
+
+.sidebar-card.warning {
+    background: linear-gradient(145deg, rgba(255, 152, 0, 0.1), rgba(255, 152, 0, 0.05));
+    border-color: rgba(255, 152, 0, 0.3);
+}
+
+.sidebar-card.warning h5 {
+    color: #ff9800;
+}
+
+/* Legal Navigation */
+.legal-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legal-nav li {
+    margin-bottom: 10px;
+}
+
+.legal-nav li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background: rgba(175, 169, 57, 0.05);
+    border-radius: 8px;
+    color: #ECECEC;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.legal-nav li a i {
+    color: #AFA939;
+    margin-right: 10px;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.legal-nav li a:hover,
+.legal-nav li.active a {
+    background: rgba(175, 169, 57, 0.15);
+    color: #AFA939;
+}
+
+.legal-nav li a:hover i,
+.legal-nav li.active a i {
+    transform: translateX(5px);
+}
+
+/* Security Features */
+.security-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.security-features li {
+    padding: 10px 0;
+    color: #ECECEC;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(175, 169, 57, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.security-features li:last-child {
+    border-bottom: none;
+}
+
+.security-features li i {
+    margin-right: 10px;
+}
+
+/* Key Points */
+.key-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.key-points li {
+    padding: 10px 0;
+    color: #ECECEC;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.key-points li i {
+    margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .legal-sidebar {
+        position: static;
+        margin-top: 40px;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 25px 20px;
+    }
+    
+    .page-header {
+        padding: 150px 0 60px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .legal-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .legal-intro {
+        padding: 15px 20px;
+    }
+    
+    .highlight-box {
+        flex-direction: column;
+    }
+    
+    .highlight-box i {
+        margin-bottom: 10px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .back-to-top,
+    .legal-sidebar,
+    .page-header {
+        display: none !important;
+    }
+    
+    .legal-content {
+        background: #fff !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+    
+    .legal-section h2,
+    .legal-section h3 {
+        color: #000 !important;
+    }
+    
+    .legal-section p,
+    .legal-section ul li {
+        color: #333 !important;
+    }
+    
+    .col-lg-8 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}

@@ -1,0 +1,2825 @@
+/* ===================================
+   Kamal & Associates - Custom CSS
+   Pure HTML/CSS/JS/Bootstrap Version
+   =================================== */
+
+/* ===== CSS Variables ===== */
+:root {
+    --primary-color: #AFA939;
+    --primary-dark: #B48811;
+    --bg-dark: #0F1113;
+    --bg-dark-secondary: #1A1D21;
+    --text-light: #ECECEC;
+    --text-muted: #9CA3AF;
+    --gradient-primary: linear-gradient(135deg, #AFA939 0%, #B48811 100%);
+    --gradient-primary-hover: linear-gradient(135deg, #B48811 0%, #AFA939 100%);
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --transition: all 0.3s ease;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-accent {
+    color: var(--primary-color);
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    color: #000;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--gradient-primary-hover);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(175, 169, 57, 0.3);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.btn-outline-primary:hover {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+/* ==================== 
+   NAVIGATION BAR STYLES 
+   ==================== */
+
+/* 1. Navbar Container */
+.navbar-dark.bg-dark-custom {
+    background-color: #0F1113;
+    /* Matches React Background */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+/* 2. Brand Section (Logo + Text) */
+.brand-logo {
+    height: 50px;
+    /* Adjust based on your actual logo file */
+    width: auto;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.brand-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--primary-color);
+    /* Gold */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 3. Navigation Links (Center) */
+.navbar-nav .nav-link {
+    color: #e5e7eb !important;
+    /* Light Grey */
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0 15px !important;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    /* Gold on Hover */
+}
+
+/* 4. Action Zone (Right) */
+.phone-number {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.btn-gold {
+    background-color: var(--primary-color);
+    color: #000000;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.btn-gold:hover {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* 5. Sticky State (Optional: Adds shadow when scrolling) */
+.navbar.sticky-top.scrolled {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    /* Shrinks slightly on scroll */
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+.rotating-text-wrapper {
+    display: block;
+    margin-top: 10px;
+}
+
+.rotating-text {
+    color: var(--primary-color);
+    display: inline-block;
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typewriter Effect Cursor */
+.txt-rotate>.wrap {
+    border-right: 0.08em solid var(--primary-color);
+    /* Uses your Gold color */
+    padding-right: 5px;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+/* The blinking animation */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--primary-color)
+    }
+}
+
+/* Color for the Rotating Text */
+.txt-rotate {
+    color: var(--primary-color);
+    /* This sets it to your Gold (#AFA939) */
+    font-weight: 700;
+    /* Optional: Makes the text bold */
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 550px;
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.play-btn-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.play-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+}
+
+.play-btn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.play-btn i {
+    color: #000;
+    font-size: 18px;
+    margin-left: 3px;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
+.play-text {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* ===== Section Styles ===== */
+.section-padding {
+    padding: 100px 0;
+}
+
+.section-dark {
+    background-color: var(--bg-dark-secondary);
+}
+
+.section-subtitle {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+.section-description {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== Service Cards ===== */
+.service-card {
+    background: var(--bg-dark-secondary);
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    transition: var(--transition);
+    border: 1px solid rgba(175, 169, 57, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(175, 169, 57, 0.3);
+    box-shadow: var(--shadow);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.service-icon i {
+    font-size: 32px;
+    color: #000;
+}
+
+.service-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.service-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(175, 169, 57, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: var(--transition);
+}
+
+.service-link i {
+    color: var(--primary-color);
+}
+
+.service-card:hover .service-link {
+    background: var(--gradient-primary);
+}
+
+.service-card:hover .service-link i {
+    color: #000;
+}
+
+/* ===== Counter Section ===== */
+.counter-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(175, 169, 57, 0.1) 0%, rgba(180, 136, 17, 0.1) 100%);
+    border-top: 1px solid rgba(175, 169, 57, 0.2);
+    border-bottom: 1px solid rgba(175, 169, 57, 0.2);
+}
+
+.counter-wrap {
+    text-align: center;
+    padding: 30px;
+}
+
+.counter-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.counter-icon i {
+    font-size: 28px;
+    color: #000;
+}
+
+.counter-number {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.counter-label {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ===== Flip Cards ===== */
+.flip-card {
+    height: 350px;
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+}
+
+.flip-card-front::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.flip-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    width: 100%;
+}
+
+.flip-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.flip-icon i {
+    font-size: 24px;
+    color: #000;
+}
+
+.flip-card-front h3 {
+    font-size: 1.4rem;
+    color: var(--text-light);
+}
+
+.flip-card-back {
+    background: var(--gradient-primary);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.flip-card-back h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.flip-card-back p {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-flip {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background: #000;
+    color: var(--primary-color);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-flip:hover {
+    background: var(--bg-dark);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* ===== Case Studies ===== */
+.nav-tabs-custom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.nav-tabs-custom .nav-link {
+    background: rgba(175, 169, 57, 0.1);
+    border: 1px solid rgba(175, 169, 57, 0.2);
+    color: var(--text-light);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav-tabs-custom .nav-link:hover,
+.nav-tabs-custom .nav-link.active {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: #000;
+}
+
+.case-study-card {
+    background: var(--bg-dark);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid rgba(175, 169, 57, 0.1);
+    height: 100%;
+}
+
+.case-study-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+    border-color: rgba(175, 169, 57, 0.3);
+}
+
+.case-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.badge-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--gradient-primary);
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.case-content {
+    padding: 25px;
+}
+
+.case-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.case-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.case-result {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.case-result i {
+    font-size: 1.1rem;
+}
+
+.case-item {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.case-item.hidden {
+    display: none;
+}
+
+/* ===== Award Cards ===== */
+.award-card {
+    background: var(--bg-dark-secondary);
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(175, 169, 57, 0.1);
+    height: 100%;
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(175, 169, 57, 0.3);
+    box-shadow: var(--shadow);
+}
+
+.award-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.award-icon i {
+    font-size: 32px;
+    color: #000;
+}
+
+.award-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.award-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ===== Attorney Cards ===== */
+
+/* === Head of Chamber Special Styling === */
+@media (min-width: 992px) {
+    .head-attorney {
+        transform: scale(1.2);
+        /* Increases size by 20% */
+        transform-origin: center;
+        /* Scales from the center */
+        z-index: 10;
+        /* Ensures it sits "above" other elements */
+        border: 1px solid var(--primary-color);
+        /* Adds a thin Gold border for emphasis */
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        /* Adds a stronger shadow */
+    }
+}
+
+/* Optional: Add extra breathing room so the big card doesn't touch the text above */
+.head-attorney {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.attorney-card {
+    background: var(--bg-dark);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid rgba(175, 169, 57, 0.1);
+}
+
+.attorney-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.attorney-link:hover .attorney-card {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+    border-color: rgba(175, 169, 57, 0.3);
+}
+
+.attorney-img {
+    height: 300px;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    overflow: hidden;
+}
+
+.attorney-social {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    transition: var(--transition);
+}
+
+.attorney-link:hover .attorney-social {
+    bottom: 0;
+}
+
+.attorney-social .social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.attorney-social .social-link:hover {
+    transform: translateY(-3px);
+}
+
+.attorney-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.attorney-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.attorney-info .position {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ===== Testimonials ===== */
+/* The Card Itself */
+
+/* Option B: Subtle Gradient */
+.testimonials-bg {
+    background: linear-gradient(to bottom, #0F1113, #1A1D21) !important;
+}
+
+.testimonial-card {
+    background-color: #1A1D21;
+    /* Dark Secondary Background */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    /* Subtle lift on hover */
+    border-color: var(--primary-color);
+}
+
+/* Stars */
+.star-rating {
+    color: var(--primary-color);
+    /* Gold Color */
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Quote Text */
+.testimonial-text {
+    color: #9CA3AF;
+    /* Muted Grey */
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    min-height: 80px;
+    /* Ensures all cards align nicely even with short text */
+}
+
+/* Author Section (Bottom) */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+}
+
+.author-img {
+    width: 50px !important;
+    /* Force override carousel styles */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid var(--primary-color);
+}
+
+.author-name {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-family: var(--font-heading);
+}
+
+.author-role {
+    color: #6B7280;
+    /* Darker grey for role */
+    font-size: 13px;
+    display: block;
+}
+
+/* ==================== 
+   CLIENT LOGO CAROUSEL (FIXED SIZES) 
+   ==================== */
+
+/* 1. The Container Slot */
+/* This forces every carousel item to be exactly the same size */
+.logo-carousel .item {
+    height: 100px;
+    /* Fixed height for the container */
+    display: flex;
+    /* Uses Flexbox */
+    align-items: center;
+    /* Vertically centers the logo */
+    justify-content: center;
+    /* Horizontally centers the logo */
+    padding: 0 15px;
+    /* Adds breathing room on sides */
+}
+
+/* 2. The Logo Image */
+.client-logo {
+    max-height: 80px !important;
+    /* Forces all logos to be 50px tall */
+    width: auto !important;
+    /* Lets width adjust automatically */
+    max-width: 100%;
+    /* Ensures it doesn't overflow */
+
+    /* Styling */
+    opacity: 0.5;
+    filter: grayscale(100%) invert(1);
+    /* White/Grey look */
+    transition: all 0.4s ease;
+    display: block;
+}
+
+/* 3. Hover Effect */
+.client-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%) invert(0);
+    /* Reveal original colors */
+    transform: scale(1.1);
+}
+
+/* ===== CTA Section ===== */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, rgba(175, 169, 57, 0.1) 0%, rgba(180, 136, 17, 0.1) 100%);
+    border-top: 1px solid rgba(175, 169, 57, 0.2);
+    border-bottom: 1px solid rgba(175, 169, 57, 0.2);
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* ========================
+   COMPACT FOOTER NEWSLETTER
+   ======================== */
+
+/* 1. The Input Field */
+.subscribe-form-compact .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    /* Transparent/Dark bg */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-radius: 4px 0 0 4px;
+    /* Rounded left only */
+    padding: 10px 15px;
+    height: 45px;
+}
+
+.subscribe-form-compact .form-control::placeholder {
+    color: #6c757d;
+    /* Muted placeholder text */
+    font-size: 14px;
+}
+
+.subscribe-form-compact .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary-color);
+    /* Gold border on click */
+    box-shadow: none;
+}
+
+/* 2. The Gold Button */
+.subscribe-form-compact .btn-gold {
+    background-color: var(--primary-color);
+    /* Your Gold #AFA939 */
+    color: #000000;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 4px 4px 0;
+    /* Rounded right only */
+    transition: all 0.3s ease;
+}
+
+.subscribe-form-compact .btn-gold:hover {
+    background-color: #ffffff;
+    /* Turns white on hover */
+    color: var(--primary-color);
+}
+
+
+/* ===== Consultation Form ===== */
+.consultation-form-wrap {
+    background: var(--bg-dark);
+    border-radius: 20px;
+    padding: 50px;
+    border: 1px solid rgba(175, 169, 57, 0.1);
+}
+
+.form-label {
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+    background: rgba(175, 169, 57, 0.05);
+    border: 1px solid rgba(175, 169, 57, 0.2);
+    border-radius: 10px;
+    color: var(--text-light);
+    padding: 12px 18px;
+    transition: var(--transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: rgba(175, 169, 57, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(175, 169, 57, 0.1);
+    color: var(--text-light);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.form-select option {
+    background: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.form-check-input {
+    background-color: rgba(175, 169, 57, 0.1);
+    border-color: rgba(175, 169, 57, 0.3);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-check-label {
+    color: var(--text-muted);
+}
+
+.form-check-label a {
+    color: var(--primary-color);
+}
+
+/* ===== Contact Section ===== */
+.contact-info-card {
+    background: var(--bg-dark-secondary);
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    height: 100%;
+    transition: var(--transition);
+    border: 1px solid rgba(175, 169, 57, 0.1);
+}
+
+.contact-info-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(175, 169, 57, 0.3);
+    box-shadow: var(--shadow);
+}
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.contact-icon i {
+    font-size: 24px;
+    color: #000;
+}
+
+.contact-info-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-info-card p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.contact-info-card a {
+    color: var(--text-muted);
+}
+
+.contact-info-card a:hover {
+    color: var(--primary-color);
+}
+
+.map-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(175, 169, 57, 0.2);
+}
+
+/* ===== Footer ===== */
+/* ========================
+   FOOTER SECTION STYLES
+   ======================== */
+
+.footer-section {
+    background-color: #0F1113;
+    /* Dark Background */
+    color: #9CA3AF;
+    /* Muted Text Color */
+    padding: 80px 0 30px 0;
+    font-family: 'Inter', sans-serif;
+    border-top: 3px solid var(--primary-color);
+    /* Gold Top Border */
+}
+
+/* 1. Brand Styling */
+.footer-logo {
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.footer-tagline {
+    color: var(--primary-color);
+    /* Gold Color */
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+}
+
+.footer-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 15px;
+    max-width: 350px;
+}
+
+/* 2. Headings */
+.footer-heading {
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Optional: Small gold line under headings */
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* 3. Links */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+/* 4. Business Hours */
+.business-hours li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 14px;
+}
+
+.business-hours li:last-child {
+    border-bottom: none;
+}
+
+.text-accent {
+    color: var(--primary-color) !important;
+}
+
+/* 5. Social Icons */
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border-radius: 50%;
+    /* Circle shape */
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    background: var(--primary-color);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* 6. Middle Bar (Chambers & Contact) */
+.footer-middle-bar {
+    background: rgba(255, 255, 255, 0.03);
+    /* Very subtle overlay */
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+/* Contact Pills (Phone/Email) */
+.contact-pill {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-pill i {
+    font-size: 16px;
+}
+
+.contact-pill:hover {
+    color: var(--primary-color);
+}
+
+.border-bottom-light {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Chamber Titles */
+.chamber-title {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    /* Matching your brand font */
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Chamber Addresses */
+.chamber-address {
+    color: #9CA3AF;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Dividers for Desktop View */
+@media (min-width: 768px) {
+    .border-start-md {
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .border-end-md {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Hover Effect for Chambers */
+.chamber-box {
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.chamber-box:hover .chamber-title {
+    color: var(--primary-color);
+}
+
+/* 7. Bottom Bar (Legal) */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+    font-size: 14px;
+}
+
+.established-text {
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 5px;
+}
+
+.legal-links a {
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.legal-links a:hover {
+    color: var(--primary-color);
+}
+
+.legal-links .divider {
+    margin: 0 10px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Video Modal ===== */
+#videoModal .modal-content {
+    background: #000;
+    border: none;
+    border-radius: 16px;
+}
+
+#videoModal .modal-header {
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+}
+
+#videoModal .modal-body {
+    padding: 0;
+}
+
+#videoModal iframe {
+    border-radius: 16px;
+}
+
+/* ===== Back to Top Button ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    border: none;
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(175, 169, 57, 0.3);
+}
+
+/* ===== Expertise Card ===== */
+.expertise-card {
+    margin-top: 1.5rem;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    background: rgba(26, 30, 34, 0.5);
+    border-radius: 0.5rem;
+}
+
+.expertise-content {
+    padding: 1.5rem;
+}
+
+.expertise-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.expertise-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.expertise-pill {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    background: rgba(212, 175, 55, 0.1);
+    color: #B0B0B0;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(15, 17, 19, 0.98);
+        padding: 20px;
+        border-radius: 16px;
+        margin-top: 15px;
+        border: 1px solid rgba(175, 169, 57, 0.1);
+    }
+
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .testimonial-wrap {
+        padding: 30px;
+    }
+
+    .consultation-form-wrap {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .counter-number {
+        font-size: 2.5rem;
+    }
+
+    .flip-card {
+        height: 300px;
+    }
+
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* ===== Animation Classes ===== */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Success Message ===== */
+.success-message {
+    background: rgba(175, 169, 57, 0.1);
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.success-message i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.success-message h4 {
+    margin-bottom: 10px;
+}
+
+.success-message p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* =========================================
+   REACT PORT: HEAD OF CHAMBER (Exact Match)
+   ========================================= */
+
+/* 1. The Main Card Container */
+/* React: border-2 transition-all group overflow-hidden bg-[#1a1e22]/50 border-[var(--primary-color)]/30 hover:border-[var(--primary-color)] */
+.head-chamber-card {
+    background-color: rgba(26, 30, 34, 0.5);
+    /* #1a1e22 with 50% opacity */
+    border: 2px solid rgba(175, 169, 57, 0.3);
+    /* var(--primary-color) with 30% opacity */
+    border-radius: 12px;
+    /* standard rounded-lg/xl */
+    overflow: hidden;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+/* Hover Effect: Border turns solid Gold */
+.head-chamber-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* 2. The Image Section */
+/* React: md:col-span-2 relative overflow-hidden */
+.head-img-wrapper {
+    height: 100%;
+    min-height: 400px;
+    /* React: min-h-[400px] */
+    position: relative;
+    overflow: hidden;
+}
+
+/* The Image Animation */
+/* React: group-hover:scale-110 transition-transform duration-500 */
+.head-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.head-chamber-card:hover .head-img-wrapper img {
+    transform: scale(1.1);
+    /* Zoom in 10% */
+}
+
+/* The Gradient Overlay */
+/* React: bg-gradient-to-t from-black via-black/50 to-transparent */
+.head-img-overlay {
+    position: absolute;
+    inset: 0;
+    /* top/bottom/left/right: 0 */
+    background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0.5), transparent);
+    z-index: 1;
+}
+
+/* 3. Expertise Badges */
+/* React: px-3 py-1 border rounded-full bg-[var(--primary-color)]/10 border-[var(--primary-color)]/30 text-[#B0B0B0] */
+.expertise-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 50px;
+    background-color: rgba(175, 169, 57, 0.1);
+    border: 1px solid rgba(175, 169, 57, 0.3);
+    color: #B0B0B0;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+/* 4. Bottom Details Section */
+/* React: space-y-2 text-sm border-t pt-4 text-[#B0B0B0] border-[var(--primary-color)]/20 */
+.head-details-box {
+    border-top: 1px solid rgba(175, 169, 57, 0.2);
+    padding-top: 16px;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #B0B0B0;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    /* React: space-y-2 */
+}
+
+/* =========================================
+   ATTORNEY GRID: FLIP CARDS + STATS BOX
+   ========================================= */
+
+/* --- 1. THE FLIP CARD (2:3 Portrait) --- */
+.flip-card {
+    background-color: transparent;
+    height: 450px;
+    /* Portrait Ratio */
+    perspective: 1000px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    border-radius: 12px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Common Face Styles */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Front Face */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-card-front::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%);
+}
+
+.flip-front-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    text-align: left;
+}
+
+/* Back Face (With Image & Overlay) */
+.flip-card-back {
+    /* Base styling */
+    background-color: #1A1D21;
+    border: 1px solid var(--primary-color);
+    transform: rotateY(180deg);
+
+    /* Background Image Handling */
+    background-size: cover;
+    background-position: center top;
+    /* Focuses on the face usually */
+    background-repeat: no-repeat;
+
+    /* Layout: Push content to bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px;
+
+    /* Important for the overlay */
+    position: relative;
+    z-index: 1;
+}
+
+/* The Dark Overlay (Crucial for reading text over the photo) */
+.flip-card-back::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Covers the whole card */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: -1;
+    /* Puts it behind the text but in front of the image */
+    border-radius: 11px;
+    /* Matches card radius */
+}
+
+/* Ensures text is clickable and visible */
+.flip-back-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+}
+
+/* --- 2. THE STATS BOX (Bottom) --- */
+.attorney-stats-box {
+    background: rgba(26, 30, 34, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 0;
+    /* Can adjust gap if needed */
+    backdrop-filter: blur(5px);
+}
+
+.stats-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    /* Gold */
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.expertise-pill {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 11px;
+    border-radius: 50px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    color: #B0B0B0;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #B0B0B0;
+    margin-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 6px;
+}
+
+/* =========================================
+   ATTORNEY DETAIL: HERO & NAV
+   ========================================= */
+
+/* 1. Page Wrapper (Handles the dark background & overflow) */
+.page-wrapper {
+    position: relative;
+    overflow-x: hidden;
+    background-color: #0F1113;
+    /* Deep Dark Theme */
+    min-height: 100vh;
+}
+
+/* 2. Glow Blobs (Atmosphere) */
+.glow-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    /* Soft glow */
+    z-index: 0;
+    pointer-events: none;
+    /* Let clicks pass through */
+}
+
+.blob-gold {
+    background-color: var(--primary-color);
+    /* Gold */
+}
+
+/* Specific positions for Profile Page */
+.blob-profile-top {
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    opacity: 0.15;
+}
+
+.blob-profile-side {
+    top: 400px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    opacity: 0.08;
+}
+
+/* 3. The "Back to Attorneys" Button (React Style) */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: #B0B0B0;
+    /* Muted Text */
+    font-weight: 500;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    /* Pill shape */
+    transition: all 0.3s ease;
+}
+
+.btn-back i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.btn-back:hover {
+    color: var(--primary-color);
+    /* Gold on hover */
+    border-color: rgba(212, 175, 55, 0.3);
+    background: rgba(212, 175, 55, 0.05);
+    transform: translateX(-5px);
+    /* Slight slide left effect */
+}
+
+.btn-back:hover i {
+    transform: translateX(-3px);
+    /* Arrow moves slightly more */
+}
+
+/* =========================================
+   REACT PORT: DETAIL PROFILE IMAGE (Exact Match)
+   ========================================= */
+
+/* 1. The Sticky Container (Holds Image + Contact) */
+.profile-sticky-wrapper {
+    position: sticky;
+    top: 100px;
+    /* React: top-24 (96px) */
+    z-index: 10;
+}
+
+/* 2. The Image Wrapper */
+.profile-detail-img-wrapper {
+    position: relative;
+    border-radius: 16px;
+    /* React: rounded-2xl */
+    /* React: shadow-2xl */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 24px;
+    /* Space between image and contact info */
+}
+
+/* 3. The Image Itself */
+.profile-detail-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    /* React: rounded-2xl */
+
+    /* React: border-4 border-[var(--primary-color)]/30 */
+    border: 4px solid rgba(175, 169, 57, 0.3);
+
+    /* Smooth transition if you want subtle hover effects later */
+    transition: all 0.3s ease;
+}
+
+/* 4. The Gradient Overlay */
+/* React: bg-gradient-to-t from-black/50 to-transparent */
+.profile-img-gradient {
+    position: absolute;
+    inset: 0;
+    /* Top/Right/Bottom/Left: 0 */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    border-radius: 12px;
+    /* Slightly smaller to fit inside border */
+    pointer-events: none;
+    /* Allows clicks to pass through if needed */
+}
+
+/* 5. Adjust Contact Card to sit nicely below */
+/* Since image is now separate, we style the contact box as a separate rounded card */
+.profile-contact-box {
+    background: rgba(26, 30, 34, 0.5);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================================
+   REACT PORT: QUICK CONTACT CARD (Compact)
+   ========================================= */
+
+/* 1. The Card Container */
+/* React: mt-6 border-2 bg-[#1a1e22]/50 border-[var(--primary-color)]/30 */
+.quick-contact-card {
+    margin-top: 24px;
+    /* mt-6 */
+    background-color: rgba(26, 30, 34, 0.5);
+    border: 2px solid rgba(175, 169, 57, 0.3);
+    border-radius: 12px;
+    /* Standard card radius */
+    padding: 24px;
+    /* p-6 */
+    backdrop-filter: blur(5px);
+}
+
+/* 2. The Title */
+/* React: text-theme-accent font-semibold mb-4 */
+.quick-contact-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 16px;
+    font-size: 18px;
+    /* Standard h3 size */
+}
+
+/* 3. The Links (Phone/Email) */
+/* React: flex items-center space-x-3 text-[#B0B0B0] hover:text-[var(--primary-color)] */
+.quick-contact-link {
+    display: flex;
+    align-items: center;
+    color: #B0B0B0;
+    text-decoration: none;
+    font-size: 14px;
+    /* text-sm */
+    transition: color 0.3s ease;
+    margin-bottom: 12px;
+    /* space-y-3 gap equivalent */
+}
+
+.quick-contact-link:last-child {
+    margin-bottom: 0;
+}
+
+.quick-contact-link:hover {
+    color: var(--primary-color);
+}
+
+.quick-contact-link i {
+    width: 16px;
+    /* w-4 */
+    height: 16px;
+    /* h-4 */
+    margin-right: 12px;
+    /* space-x-3 */
+}
+
+/* 4. The Button (Gradient Gold) */
+/* React: bg-gradient-gold text-[#0F1113] w-full font-semibold */
+.btn-gold-gradient {
+    display: block;
+    width: 100%;
+    /* Create the gold gradient look */
+    background: linear-gradient(to right, var(--primary-color), #FFE5B4, var(--primary-color));
+    background-size: 200% auto;
+    color: #0F1113;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-gold-gradient:hover {
+    background-position: right center;
+    /* Shine animation */
+    color: #000;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+}
+
+It seems you pasted the code for the Expertise Card but mentioned "Quick Contact Card" in your instruction. Since we just finished the Contact Card,
+I will proceed with building the Expertise Card based on the React code you provided. This card sits right below the Contact Card in the sidebar. It features a transparent dark background,
+gold border,
+and pill-shaped tags for the skills. Step 1: Update CSS (style.css) Add these styles to handle the specific "Pill" look of the tags found in your React code (rounded-full, text-xs, etc). CSS
+/* =========================================
+   REACT PORT: EXPERTISE CARD (Sidebar)
+   ========================================= */
+
+/* 1. The Card Container (Same base style as Contact Card) */
+/* React: mt-6 border-2 bg-[#1a1e22]/50 border-[var(--primary-color)]/30 */
+.expertise-card {
+    margin-top: 24px;
+    /* mt-6 */
+    background-color: rgba(26, 30, 34, 0.5);
+    border: 2px solid rgba(175, 169, 57, 0.3);
+    border-radius: 12px;
+    padding: 24px;
+    /* p-6 */
+    backdrop-filter: blur(5px);
+}
+
+/* 2. The Title */
+/* React: text-theme-accent font-semibold mb-4 */
+.expertise-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+/* 3. The Tags Wrapper */
+/* React: flex flex-wrap gap-2 */
+.expertise-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    /* gap-2 (0.5rem) */
+}
+
+/* 4. The Individual Pills */
+/* React: px-3 py-1 border rounded-full text-xs bg-[var(--primary-color)]/10 border-[var(--primary-color)]/30 text-[#B0B0B0] */
+.expertise-pill-sidebar {
+    display: inline-block;
+    padding: 4px 12px;
+    /* px-3 py-1 */
+    border: 1px solid rgba(175, 169, 57, 0.3);
+    border-radius: 50px;
+    /* rounded-full */
+    font-size: 12px;
+    /* text-xs */
+    background-color: rgba(175, 169, 57, 0.1);
+    color: #B0B0B0;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Optional Hover Effect (To make it feel premium) */
+.expertise-pill-sidebar:hover {
+    background-color: rgba(175, 169, 57, 0.2);
+    border-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   REACT PORT: PROFILE CONTENT HEADER
+   ========================================= */
+
+/* 1. Name: text-5xl font-bold mb-2 */
+.profile-name {
+    font-size: 3rem;
+    /* 48px - Matches Tailwind text-5xl */
+    line-height: 1.1;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    /* mb-3 approx */
+}
+
+/* 2. Designation: text-2xl text-theme-accent font-semibold mb-2 */
+.profile-designation {
+    font-size: 1.5rem;
+    /* 24px - Matches Tailwind text-2xl */
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--primary-color);
+    /* Theme Accent */
+    margin-bottom: 0.75rem;
+}
+
+/* 3. Credentials: text-lg text-[#B0B0B0] mb-2 */
+.profile-credentials {
+    font-size: 1.125rem;
+    /* 18px - Matches Tailwind text-lg */
+    color: #B0B0B0;
+    margin-bottom: 0.5rem;
+}
+
+/* 4. Title: text-[#B0B0B0] */
+.profile-title {
+    font-size: 1rem;
+    /* 16px - Base size */
+    color: #B0B0B0;
+    margin-bottom: 0;
+}
+
+/* Mobile Responsiveness for the huge name */
+@media (max-width: 768px) {
+    .profile-name {
+        font-size: 2.25rem;
+        /* Smaller on mobile */
+    }
+}
+
+
+/* ==================== 
+   LAYOUT FIXES: WIDER & BREATHABLE 
+   ==================== */
+
+/* 1. Widen the Content Area (The "Viewport" fix) */
+/* Standard Bootstrap stops at 1140px or 1320px. We force it wider. */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1440px !important;
+        /* Significantly wider */
+    }
+}
+
+/* 2. Increase Vertical Breathing Room */
+/* Make sections taller so content isn't squashed */
+.section-padding {
+    padding-top: 100px !important;
+    /* Increased from standard 60px/80px */
+    padding-bottom: 100px !important;
+}
+
+/* 3. Improve Text Readability ("Air" inside the text) */
+body {
+    line-height: 1.8 !important;
+    /* Standard is 1.5. This adds space between lines */
+}
+
+p {
+    margin-bottom: 1.5rem;
+    /* Adds more space after paragraphs */
+}
+
+/* 4. Add Space Between Grid Items */
+/* Ensures cards (Attorneys, Testimonials) aren't touching each other */
+.row {
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col,
+.col-auto,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12 {
+    padding-right: 20px;
+    /* Increases gutter space */
+    padding-left: 20px;
+}
+
+/* =========================================
+   ATTORNEY DETAIL PAGE NEW STYLES
+   ========================================= */
+
+/* Hero Section Gradient Overlay */
+.hero-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(15, 17, 19, 0.8) 100%);
+    pointer-events: none;
+}
+
+/* Quick Info Grid */
+.quick-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-bottom: 3rem;
+}
+
+.quick-info-item {
+    display: flex;
+    align-items: center;
+    background: rgba(26, 30, 34, 0.5);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.quick-info-item:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.1);
+}
+
+.quick-info-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), #FFE5B4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0F1113;
+    font-size: 20px;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.quick-info-content h4 {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.quick-info-content p {
+    color: #ECECEC;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Profile Sections */
+.profile-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    color: #ECECEC;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), #FFE5B4);
+    border-radius: 2px;
+}
+
+.text-center .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-text {
+    color: #B0B0B0;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* Education List */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.education-item {
+    background: rgba(26, 30, 34, 0.5);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.education-item:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
+}
+
+.education-degree {
+    margin-bottom: 16px;
+}
+
+.education-degree:last-child {
+    margin-bottom: 0;
+}
+
+.education-degree h4 {
+    color: #ECECEC;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+.education-institution {
+    color: #B0B0B0;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Practice Areas Grid */
+.practice-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .practice-areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.practice-area-card {
+    background: rgba(26, 30, 34, 0.5);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.practice-area-card:hover {
+    border-color: rgba(212, 175, 55, 1);
+}
+
+.practice-area-content {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.practice-area-content i {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.practice-area-content span {
+    color: #B0B0B0;
+    transition: color 0.3s ease;
+}
+
+.practice-area-card:hover .practice-area-content span {
+    color: var(--primary-color);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, rgba(175, 169, 57, 0.1) 0%, rgba(26, 30, 34, 0.8) 100%);
+    border: 1px solid rgba(175, 169, 57, 0.3);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.cta-content h2 {
+    color: #ECECEC;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.cta-content p {
+    color: #B0B0B0;
+    font-size: 18px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cta-buttons .btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), #FFE5B4);
+    color: #0F1113;
+    border: none;
+}
+
+.cta-buttons .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(175, 169, 57, 0.3);
+}
+
+.cta-buttons .btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.cta-buttons .btn-outline:hover {
+    background: var(--primary-color);
+    color: #0F1113;
+    transform: translateY(-2px);
+}
+
+/* Other Attorneys Section */
+.other-attorneys-section {
+    background: rgba(15, 17, 19, 0.95);
+    position: relative;
+}
+
+.other-attorneys-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.section-header .section-title {
+    color: #ECECEC;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
+    color: #B0B0B0;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Attorney Card Compact */
+.attorney-card-compact {
+    background: rgba(26, 30, 34, 0.8);
+    border: 1px solid rgba(175, 169, 57, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.attorney-card-compact:hover {
+    border-color: rgba(175, 169, 57, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(175, 169, 57, 0.15);
+}
+
+.attorney-img-compact {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.attorney-img-compact img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.3s ease;
+}
+
+.attorney-card-compact:hover .attorney-img-compact img {
+    transform: scale(1.05);
+}
+
+.attorney-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.attorney-card-compact:hover .attorney-overlay {
+    opacity: 1;
+}
+
+.attorney-social {
+    display: flex;
+    gap: 12px;
+}
+
+.attorney-social .social-link {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ECECEC;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.attorney-social .social-link:hover {
+    background: var(--primary-color);
+    color: #0F1113;
+    transform: translateY(-2px);
+}
+
+.attorney-info-compact {
+    padding: 20px;
+}
+
+.attorney-info-compact h4 {
+    color: #ECECEC;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.attorney-info-compact .position {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.attorney-info-compact .specialization {
+    color: #B0B0B0;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Attorney Card Link */
+.attorney-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.attorney-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Attorneys Carousel Styles */
+#attorneysCarousel .carousel-control-prev,
+#attorneysCarousel .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(175, 169, 57, 0.9);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+#attorneysCarousel .carousel-control-prev {
+    left: -25px;
+}
+
+#attorneysCarousel .carousel-control-next {
+    right: -25px;
+}
+
+#attorneysCarousel .carousel-control-prev:hover,
+#attorneysCarousel .carousel-control-next:hover {
+    background: var(--primary-color);
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+#attorneysCarousel .carousel-control-prev-icon,
+#attorneysCarousel .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+#attorneysCarousel .carousel-indicators {
+    bottom: -50px;
+}
+
+#attorneysCarousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(175, 169, 57, 0.3);
+    border: none;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+#attorneysCarousel .carousel-indicators button.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Carousel item centering for single attorney */
+#attorneysCarousel .carousel-item .row {
+    min-height: 400px;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .quick-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .cta-content h2 {
+        font-size: 24px;
+    }
+
+    .attorney-img-compact {
+        height: 200px;
+    }
+
+    #attorneysCarousel .carousel-control-prev {
+        left: 10px;
+    }
+
+    #attorneysCarousel .carousel-control-next {
+        right: 10px;
+    }
+
+    #attorneysCarousel .carousel-indicators {
+        bottom: -40px;
+    }
+}
+
+/* Simple Functional Profile Button */
+.btn-view-profile {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #b8860b;
+    color: #000 !important;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #b8860b;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-view-profile:hover {
+    background-color: transparent;
+    color: #b8860b !important;
+}
