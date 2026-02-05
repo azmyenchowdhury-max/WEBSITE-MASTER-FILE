@@ -1,6 +1,7 @@
 /* ===================================
    Kamal & Associates - Custom CSS
    Pure HTML/CSS/JS/Bootstrap Version
+   Created by: Azmyen Mustafa Chowdhury
    =================================== */
 
 /* ===== CSS Variables ===== */
@@ -540,6 +541,8 @@ img {
 .flip-card-front,
 .flip-card-back {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
@@ -593,25 +596,27 @@ img {
 }
 
 .flip-card-back {
-    background: var(--gradient-primary);
+    background: rgba(0, 0, 0, 0.6);
+    /* Transparent background */
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center !important;
     padding: 30px;
     text-align: center;
+    gap: 20px;
 }
 
 .flip-card-back h3 {
     font-size: 1.5rem;
-    color: #000;
-    margin-bottom: 15px;
+    color: #ffffff;
+    margin: 0;
 }
 
 .flip-card-back p {
-    color: rgba(0, 0, 0, 0.8);
-    margin-bottom: 25px;
+    color: #ffffff;
+    margin: 0;
     line-height: 1.6;
 }
 
@@ -2082,10 +2087,7 @@ img {
     box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
 }
 
-It seems you pasted the code for the Expertise Card but mentioned "Quick Contact Card" in your instruction. Since we just finished the Contact Card,
-I will proceed with building the Expertise Card based on the React code you provided. This card sits right below the Contact Card in the sidebar. It features a transparent dark background,
-gold border,
-and pill-shaped tags for the skills. Step 1: Update CSS (style.css) Add these styles to handle the specific "Pill" look of the tags found in your React code (rounded-full, text-xs, etc). CSS
+
 /* =========================================
    REACT PORT: EXPERTISE CARD (Sidebar)
    ========================================= */
@@ -2822,4 +2824,177 @@ p {
 .btn-view-profile:hover {
     background-color: transparent;
     color: #b8860b !important;
+}
+
+/* =========================================
+   PRACTICE AREA MODAL STYLES
+   ========================================= */
+.practice-modal-content {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    color: var(--text-light);
+}
+
+.border-bottom-gold {
+    border-bottom: 1px solid rgba(175, 169, 57, 0.3);
+    padding: 20px 25px;
+}
+
+.border-top-gold {
+    border-top: 1px solid rgba(175, 169, 57, 0.3);
+    padding: 20px 25px;
+}
+
+.practice-modal-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.modal-title {
+    font-family: var(--font-heading);
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0;
+}
+
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.8;
+}
+
+.btn-close-white:hover {
+    opacity: 1;
+}
+
+.practice-overview {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #d1d5db !important;
+    /* Tailwind gray-300 equivalent */
+}
+
+/* Service List */
+.practice-service-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+@media (min-width: 768px) {
+    .practice-service-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.practice-service-list li {
+    position: relative;
+    padding-left: 25px;
+    color: var(--text-muted);
+}
+
+.practice-service-list li::before {
+    content: "\f00c";
+    /* FontAwesome Check Icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+}
+
+/* Why Choose Us Items */
+.why-choose-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.why-choose-icon {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    background: rgba(175, 169, 57, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    border: 1px solid rgba(175, 169, 57, 0.2);
+}
+
+.why-choose-text h6 {
+    color: #fff;
+    margin-bottom: 4px;
+    font-size: 1rem;
+}
+
+.why-choose-text p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Modal Body Padding */
+.modal-body {
+    padding: 30px;
+}
+
+
+/* ===== Flip Card Backgrounds ===== */
+.flip-card-front.bg-corporate {
+    background-image: url("https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600");
+}
+
+.flip-card-front.bg-banking {
+    background-image: url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600");
+}
+
+.flip-card-front.bg-realestate {
+    background-image: url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600");
+}
+
+.flip-card-front.bg-family {
+    background-image: url("https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600");
+}
+
+.flip-card-front.bg-criminal {
+    background-image: url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600");
+}
+
+.flip-card-front.bg-ip {
+    background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600");
+}
+
+/* Updated Flip Card Content Style */
+.flip-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+
+/* Fix for Flip Card Button Clickability */
+.flip-card:hover .flip-card-front {
+    z-index: -1;
+}
+
+.flip-card:hover .flip-card-back {
+    z-index: 100;
 }

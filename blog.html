@@ -1,186 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Kamal & Associates - Legal Insights & News</title>
-    <meta name="description" content="Stay updated with the latest legal news, insights, and articles from Kamal & Associates. Expert analysis on corporate law, family law, and more.">
-    
+    <meta name="description"
+        content="Stay updated with the latest legal news, insights, and articles from Kamal & Associates. Expert analysis on corporate law, family law, and more.">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/Logo.png">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
-    <style>
-        .blog-card {
-            background: #1C1E20;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(175, 169, 57, 0.1);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        .blog-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            border-color: rgba(175, 169, 57, 0.3);
-        }
-        .blog-img {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-        }
-        .blog-content {
-            padding: 25px;
-        }
-        .blog-content h3 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-        .blog-content h3 a {
-            color: #ECECEC;
-        }
-        .blog-content h3 a:hover {
-            color: #AFA939;
-        }
-        .blog-meta {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-            font-size: 0.85rem;
-            color: #9CA3AF;
-        }
-        .blog-excerpt {
-            color: #9CA3AF;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-        .sidebar-widget {
-            background: #1C1E20;
-            border-radius: 12px;
-            padding: 25px;
-            border: 1px solid rgba(175, 169, 57, 0.15);
-            margin-bottom: 25px;
-        }
-        .sidebar-widget h4 {
-            color: #AFA939;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-        .category-list li {
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(175, 169, 57, 0.1);
-        }
-        .category-list li:last-child {
-            border-bottom: none;
-        }
-        .category-list a {
-            display: flex;
-            justify-content: space-between;
-            color: #9CA3AF;
-        }
-        .category-list a:hover {
-            color: #AFA939;
-        }
-        .recent-post {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(175, 169, 57, 0.1);
-        }
-        .recent-post:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        .recent-post-img {
-            width: 80px;
-            height: 60px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 8px;
-            flex-shrink: 0;
-        }
-        .recent-post-content h6 {
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-        .recent-post-content h6 a {
-            color: #ECECEC;
-        }
-        .recent-post-content h6 a:hover {
-            color: #AFA939;
-        }
-        .recent-post-content small {
-            color: #9CA3AF;
-        }
-    </style>
+<style>
+    .blog-card {
+        background: #1C1E20;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(175, 169, 57, 0.1);
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        border-color: rgba(175, 169, 57, 0.3);
+    }
+
+    .blog-img {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .blog-content {
+        padding: 25px;
+    }
+
+    .blog-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .blog-content h3 a {
+        color: #ECECEC;
+    }
+
+    .blog-content h3 a:hover {
+        color: #AFA939;
+    }
+
+    .blog-meta {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-size: 0.85rem;
+        color: #9CA3AF;
+    }
+
+    .blog-excerpt {
+        color: #9CA3AF;
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+
+    .sidebar-widget {
+        background: #1C1E20;
+        border-radius: 12px;
+        padding: 25px;
+        border: 1px solid rgba(175, 169, 57, 0.15);
+        margin-bottom: 25px;
+    }
+
+    .sidebar-widget h4 {
+        color: #AFA939;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+    }
+
+    .category-list li {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(175, 169, 57, 0.1);
+    }
+
+    .category-list li:last-child {
+        border-bottom: none;
+    }
+
+    .category-list a {
+        display: flex;
+        justify-content: space-between;
+        color: #9CA3AF;
+    }
+
+    .category-list a:hover {
+        color: #AFA939;
+    }
+
+    .recent-post {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(175, 169, 57, 0.1);
+    }
+
+    .recent-post:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .recent-post-img {
+        width: 80px;
+        height: 60px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+
+    .recent-post-content h6 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .recent-post-content h6 a {
+        color: #ECECEC;
+    }
+
+    .recent-post-content h6 a:hover {
+        color: #AFA939;
+    }
+
+    .recent-post-content small {
+        color: #9CA3AF;
+    }
+</style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark-custom">
-    <div class="container">
-        
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="images/logo.png" alt="Kamal & Associates" class="brand-logo me-3">
-            
-            <div class="brand-text d-flex flex-column">
-                <span class="brand-name">Kamal & Associates</span>
-                <span class="brand-tagline">Defender Of Justice</span>
-            </div>
-        </a>
+        <div class="container">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Kamal & Associates" class="brand-logo me-3">
 
-        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="attorneys.html">Attorneys</a></li>
-                <li class="nav-item"><a class="nav-link" href="practice-areas.html">Practice Areas</a></li>
-                <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
-                <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="d-none d-lg-flex align-items-center action-zone">
-            <div class="phone-group me-4">
-                <i class="fas fa-phone-alt text-accent me-2"></i>
-                <a href="tel:+8801711000000" class="phone-number">+880 1711 000 000</a>
-            </div>
-            
-            <a href="consultation.html" class="btn btn-gold">
-                Free Consultation <i class="fas fa-arrow-right ms-2"></i>
+                <div class="brand-text d-flex flex-column">
+                    <span class="brand-name">Kamal & Associates</span>
+                    <span class="brand-tagline">Defender Of Justice</span>
+                </div>
             </a>
-        </div>
 
-    </div>
-</nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="attorneys.html">Attorneys</a></li>
+                    <li class="nav-item"><a class="nav-link" href="practice-areas.html">Practice Areas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="d-none d-lg-flex align-items-center action-zone">
+                <div class="phone-group me-4">
+                    <i class="fas fa-phone-alt text-accent me-2"></i>
+                    <a href="tel:+8801711000000" class="phone-number">+880 1711 000 000</a>
+                </div>
+
+                <a href="consultation.html" class="btn btn-gold">
+                    Free Consultation <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+
+        </div>
+    </nav>
 
     <!-- Page Header -->
-    <section class="hero-section" style="min-height: 50vh; background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920');">
+    <section class="hero-section"
+        style="min-height: 50vh; background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920');">
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="row align-items-center justify-content-center text-center" style="min-height: 50vh;">
@@ -206,103 +234,155 @@
                 <div class="col-lg-8">
                     <div class="row">
                         <div class="col-md-6 mb-4" data-aos="fade-up">
-                            <div class="blog-card">
-                                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600')"></div>
+                            <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal1"
+                                style="cursor: pointer;">
+                                <div class="blog-img"
+                                    style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600')">
+                                </div>
                                 <div class="blog-content">
-                                    <span class="badge mb-2" style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">Corporate Law</span>
+                                    <span class="badge mb-2"
+                                        style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">Corporate
+                                        Law</span>
                                     <div class="blog-meta">
                                         <span><i class="far fa-calendar-alt me-1"></i> January 25, 2026</span>
                                         <span><i class="far fa-user me-1"></i> Advocate Kamal Hossain</span>
                                     </div>
-                                    <h3><a href="#">Understanding Corporate Mergers and Acquisitions in Bangladesh</a></h3>
-                                    <p class="blog-excerpt">A comprehensive guide to navigating the complex landscape of M&A transactions under Bangladeshi corporate law.</p>
-                                    <a href="#" class="text-accent">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <h3><a href="javascript:void(0)"
+                                            class="text-decoration-none text-light">Understanding Corporate Mergers and
+                                            Acquisitions in Bangladesh</a>
+                                    </h3>
+                                    <p class="blog-excerpt">A comprehensive guide to navigating the complex landscape of
+                                        M&A transactions under Bangladeshi corporate law.</p>
+                                    <a href="javascript:void(0)" class="text-accent text-decoration-none">Read More <i
+                                            class="fas fa-arrow-right ms-1"></i></a>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="blog-card">
-                                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600')"></div>
+                            <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal2"
+                                style="cursor: pointer;">
+                                <div class="blog-img"
+                                    style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600')">
+                                </div>
                                 <div class="blog-content">
-                                    <span class="badge mb-2" style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">Property Law</span>
+                                    <span class="badge mb-2"
+                                        style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">Property
+                                        Law</span>
                                     <div class="blog-meta">
                                         <span><i class="far fa-calendar-alt me-1"></i> January 20, 2026</span>
                                         <span><i class="far fa-user me-1"></i> Advocate Mohammad Ali</span>
                                     </div>
-                                    <h3><a href="#">Property Rights: Essential Guide for Homeowners in Bangladesh</a></h3>
-                                    <p class="blog-excerpt">Everything homeowners need to know about protecting their property rights under Bangladeshi law.</p>
-                                    <a href="#" class="text-accent">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <h3><a href="javascript:void(0)" class="text-decoration-none text-light">Property
+                                            Rights: Essential Guide for Homeowners in Bangladesh</a>
+                                    </h3>
+                                    <p class="blog-excerpt">Everything homeowners need to know about protecting their
+                                        property rights under Bangladeshi law.</p>
+                                    <a href="javascript:void(0)" class="text-accent text-decoration-none">Read More <i
+                                            class="fas fa-arrow-right ms-1"></i></a>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="blog-card">
-                                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600')"></div>
+                            <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal3"
+                                style="cursor: pointer;">
+                                <div class="blog-img"
+                                    style="background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600')">
+                                </div>
                                 <div class="blog-content">
-                                    <span class="badge mb-2" style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">Family Law</span>
+                                    <span class="badge mb-2"
+                                        style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">Family
+                                        Law</span>
                                     <div class="blog-meta">
                                         <span><i class="far fa-calendar-alt me-1"></i> January 15, 2026</span>
                                         <span><i class="far fa-user me-1"></i> Advocate Nusrat Jahan</span>
                                     </div>
-                                    <h3><a href="#">Navigating Divorce Proceedings: A Compassionate Legal Guide</a></h3>
-                                    <p class="blog-excerpt">Understanding the divorce process in Bangladesh and how to protect your interests while minimizing conflict.</p>
-                                    <a href="#" class="text-accent">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <h3><a href="javascript:void(0)" class="text-decoration-none text-light">Navigating
+                                            Divorce Proceedings: A Compassionate Legal Guide</a></h3>
+                                    <p class="blog-excerpt">Understanding the divorce process in Bangladesh and how to
+                                        protect your interests while minimizing conflict.</p>
+                                    <a href="javascript:void(0)" class="text-accent text-decoration-none">Read More <i
+                                            class="fas fa-arrow-right ms-1"></i></a>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="blog-card">
-                                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600')"></div>
+                            <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal4"
+                                style="cursor: pointer;">
+                                <div class="blog-img"
+                                    style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600')">
+                                </div>
                                 <div class="blog-content">
-                                    <span class="badge mb-2" style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">Criminal Law</span>
+                                    <span class="badge mb-2"
+                                        style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">Criminal
+                                        Law</span>
                                     <div class="blog-meta">
                                         <span><i class="far fa-calendar-alt me-1"></i> January 10, 2026</span>
                                         <span><i class="far fa-user me-1"></i> Advocate Rashid Ahmed</span>
                                     </div>
-                                    <h3><a href="#">Your Rights When Facing Criminal Charges in Bangladesh</a></h3>
-                                    <p class="blog-excerpt">Understanding your constitutional rights and the criminal justice process is essential when facing charges.</p>
-                                    <a href="#" class="text-accent">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <h3><a href="javascript:void(0)" class="text-decoration-none text-light">Your Rights
+                                            When Facing Criminal Charges in Bangladesh</a></h3>
+                                    <p class="blog-excerpt">Understanding your constitutional rights and the criminal
+                                        justice process is essential when facing charges.</p>
+                                    <a href="javascript:void(0)" class="text-accent text-decoration-none">Read More <i
+                                            class="fas fa-arrow-right ms-1"></i></a>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                            <div class="blog-card">
-                                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600')"></div>
+                            <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal5"
+                                style="cursor: pointer;">
+                                <div class="blog-img"
+                                    style="background-image: url('https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600')">
+                                </div>
                                 <div class="blog-content">
-                                    <span class="badge mb-2" style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">Legal Updates</span>
+                                    <span class="badge mb-2"
+                                        style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">Legal
+                                        Updates</span>
                                     <div class="blog-meta">
                                         <span><i class="far fa-calendar-alt me-1"></i> January 5, 2026</span>
                                         <span><i class="far fa-user me-1"></i> Advocate Tanvir Hassan</span>
                                     </div>
-                                    <h3><a href="#">New Tax Regulations 2026: What Businesses Need to Know</a></h3>
-                                    <p class="blog-excerpt">Recent changes to tax regulations and their implications for businesses operating in Bangladesh.</p>
-                                    <a href="#" class="text-accent">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <h3><a href="javascript:void(0)" class="text-decoration-none text-light">New Tax
+                                            Regulations 2026: What Businesses Need to Know</a></h3>
+                                    <p class="blog-excerpt">Recent changes to tax regulations and their implications for
+                                        businesses operating in Bangladesh.</p>
+                                    <a href="javascript:void(0)" class="text-accent text-decoration-none">Read More <i
+                                            class="fas fa-arrow-right ms-1"></i></a>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
-                            <div class="blog-card">
-                                <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600')"></div>
+                            <div class="blog-card" data-bs-toggle="modal" data-bs-target="#blogModal6"
+                                style="cursor: pointer;">
+                                <div class="blog-img"
+                                    style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600')">
+                                </div>
                                 <div class="blog-content">
-                                    <span class="badge mb-2" style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">IP Law</span>
+                                    <span class="badge mb-2"
+                                        style="background: linear-gradient(135deg, #AFA939 0%, #B48811 100%); color: #0F1113;">IP
+                                        Law</span>
                                     <div class="blog-meta">
                                         <span><i class="far fa-calendar-alt me-1"></i> December 28, 2025</span>
                                         <span><i class="far fa-user me-1"></i> Advocate Sabrina Chowdhury</span>
                                     </div>
-                                    <h3><a href="#">Intellectual Property Protection for Startups</a></h3>
-                                    <p class="blog-excerpt">Essential IP protection strategies for startups and emerging businesses in Bangladesh.</p>
-                                    <a href="#" class="text-accent">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                                    <h3><a href="javascript:void(0)"
+                                            class="text-decoration-none text-light">Intellectual Property Protection for
+                                            Startups</a></h3>
+                                    <p class="blog-excerpt">Essential IP protection strategies for startups and emerging
+                                        businesses in Bangladesh.</p>
+                                    <a href="javascript:void(0)" class="text-accent text-decoration-none">Read More <i
+                                            class="fas fa-arrow-right ms-1"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Sidebar -->
                 <div class="col-lg-4">
                     <!-- Search -->
@@ -313,7 +393,7 @@
                             <button class="btn btn-primary"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
-                    
+
                     <!-- Categories -->
                     <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="100">
                         <h4>Categories</h4>
@@ -326,33 +406,39 @@
                             <li><a href="#">Legal Updates <span class="badge bg-secondary">1</span></a></li>
                         </ul>
                     </div>
-                    
+
                     <!-- Recent Posts -->
                     <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="200">
                         <h4>Recent Posts</h4>
                         <div class="recent-post">
-                            <div class="recent-post-img" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=200')"></div>
+                            <div class="recent-post-img"
+                                style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=200')">
+                            </div>
                             <div class="recent-post-content">
                                 <h6><a href="#">Understanding Corporate Mergers...</a></h6>
                                 <small>January 25, 2026</small>
                             </div>
                         </div>
                         <div class="recent-post">
-                            <div class="recent-post-img" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=200')"></div>
+                            <div class="recent-post-img"
+                                style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=200')">
+                            </div>
                             <div class="recent-post-content">
                                 <h6><a href="#">Property Rights: Essential Guide...</a></h6>
                                 <small>January 20, 2026</small>
                             </div>
                         </div>
                         <div class="recent-post">
-                            <div class="recent-post-img" style="background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200')"></div>
+                            <div class="recent-post-img"
+                                style="background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200')">
+                            </div>
                             <div class="recent-post-content">
                                 <h6><a href="#">Navigating Divorce Proceedings...</a></h6>
                                 <small>January 15, 2026</small>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Newsletter -->
                     <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="300">
                         <h4>Newsletter</h4>
@@ -361,7 +447,8 @@
                             <div class="mb-3">
                                 <input type="email" class="form-control" placeholder="Your email" required>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Subscribe <i class="fas fa-paper-plane ms-2"></i></button>
+                            <button type="submit" class="btn btn-primary w-100">Subscribe <i
+                                    class="fas fa-paper-plane ms-2"></i></button>
                         </form>
                     </div>
                 </div>
@@ -372,17 +459,17 @@
     <!-- Footer -->
     <footer class="footer-section">
         <div class="container">
-        
+
             <div class="row gx-5 mb-5">
-            
+
                 <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
                     <div class="footer-brand mb-4">
                         <h2 class="footer-logo">Kamal & Associates</h2>
                         <span class="footer-tagline">Defender Of Justice</span>
                     </div>
                     <p class="footer-desc">
-                    With a proven record of assisting thousands in overcoming wrongful denials nationwide, 
-                    Kamal & Associates stands as a trusted name in legal advocacy.
+                        With a proven record of assisting thousands in overcoming wrongful denials nationwide,
+                        Kamal & Associates stands as a trusted name in legal advocacy.
                     </p>
                     <div class="footer-social mt-4">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -433,7 +520,7 @@
                     <div class="footer-newsletter-compact mt-5">
                         <h4 class="footer-heading mb-3">Subscribe</h4>
                         <p class="text-white small mb-3">
-                        Stay updated with the latest legal news and firm announcements.
+                            Stay updated with the latest legal news and firm announcements.
                         </p>
                         <form class="subscribe-form-compact">
                             <div class="input-group">
@@ -448,7 +535,7 @@
             </div>
 
             <div class="footer-middle-bar">
-            
+
                 <div class="row justify-content-center mb-4 border-bottom-light pb-4">
                     <div class="col-md-10 text-center">
                         <div class="contact-pill-wrapper">
@@ -467,7 +554,7 @@
                     <div class="col-12 mb-3">
                         <h5 class="footer-subheading text-accent">Our Chambers</h5>
                     </div>
-                
+
                     <div class="col-md-4 mb-4 mb-md-0 chamber-col">
                         <div class="chamber-box">
                             <h6 class="chamber-title">High Court Chamber</h6>
@@ -508,7 +595,8 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
                         <p class="mb-0">
-                            &copy; 2026 <span class="text-white">Kamal & Associates</span>. All rights reserved. <br class="d-sm-none">
+                            &copy; 2026 <span class="text-white">Kamal & Associates</span>. All rights reserved. <br
+                                class="d-sm-none">
                             <span class="established-text">Established 1984.</span>
                         </p>
                     </div>
@@ -529,8 +617,418 @@
 
     <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
 
+
+    <!-- Blog Modals -->
+
+    <!-- Modal 1: Corporate M&A -->
+    <div class="modal fade" id="blogModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content practice-modal-content">
+                <div class="modal-header border-bottom-gold">
+                    <div>
+                        <div class="badge bg-gold text-dark mb-2">Corporate Law</div>
+                        <h4 class="modal-title text-white">Understanding Corporate Mergers and Acquisitions in
+                            Bangladesh</h4>
+                        <div class="text-muted small mt-1">
+                            <span class="me-3"><i class="far fa-user me-1"></i> Advocate Kamal Hossain</span>
+                            <span><i class="far fa-calendar-alt me-1"></i> January 25, 2026</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200" alt="Corporate M&A"
+                        class="img-fluid rounded mb-4 w-100" style="max-height: 400px; object-fit: cover;">
+
+                    <h5 class="text-accent mb-3">Introduction</h5>
+                    <p>Mergers and Acquisitions (M&A) are pivotal strategies for corporate growth and restructuring. In
+                        Bangladesh, the legal framework governing M&A is multifaceted, involving the Companies Act,
+                        1994, and regulations from the Bangladesh Securities and Exchange Commission (BSEC).
+                        Understanding these complexities is crucial for any business leader considering a strategic
+                        partnership.</p>
+
+                    <h5 class="text-accent mb-3 mt-4">Key Legal Points</h5>
+                    <ul class="practice-service-list position-relative ps-0" style="list-style: none;">
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Regulatory Approval:</strong> Major deals often require approval from the High Court
+                            Division of the Supreme Court.
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Due Diligence:</strong> A comprehensive legal audit of assets, liabilities, and
+                            intellectual property is non-negotiable.
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Employment Transfer:</strong> Specific laws protect employee rights during the
+                            transfer of undertakings.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-accent mb-3 mt-4">Practical Insight</h5>
+                    <p>For a smooth transaction, start early with a term sheet that clearly defines the valuation method
+                        and post-merger governance structure. Misalignment on these foundational elements is the most
+                        common cause of deal failure in the local market.</p>
+
+                    <div class="alert alert-dark border-gold mt-4">
+                        <h6 class="text-accent mb-1"><i class="fas fa-exclamation-circle me-2"></i>Legal Advisory Note
+                        </h6>
+                        <p class="mb-0">If your company is approaching a merger specifically to consolidate market
+                            share, be wary of the Competition Act, 2012. You must ensure the move doesn't violate
+                            anti-trust regulations.</p>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-dark rounded border border-secondary">
+                        <small class="text-muted"><strong>Disclaimer:</strong> This article is for informational
+                            purposes only and does not constitute legal advice. Each M&A transaction is unique and
+                            requires specific legal counsel.</small>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-gold">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+                    <a href="consultation.html" class="btn btn-primary">Schedule M&A Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Property Rights -->
+    <div class="modal fade" id="blogModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content practice-modal-content">
+                <div class="modal-header border-bottom-gold">
+                    <div>
+                        <div class="badge bg-gold text-dark mb-2">Property Law</div>
+                        <h4 class="modal-title text-white">Property Rights: Essential Guide for Homeowners in Bangladesh
+                        </h4>
+                        <div class="text-muted small mt-1">
+                            <span class="me-3"><i class="far fa-user me-1"></i> Advocate Mohammad Ali</span>
+                            <span><i class="far fa-calendar-alt me-1"></i> January 20, 2026</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200" alt="Property Rights"
+                        class="img-fluid rounded mb-4 w-100" style="max-height: 400px; object-fit: cover;">
+
+                    <h5 class="text-accent mb-3">Introduction</h5>
+                    <p>Owning a home is a dream for many, but disputes over title, mutation, and inheritance often turn
+                        that dream into a nightmare. Understanding your fundamental property rights is the first line of
+                        defense against unlawful claims and bureaucratic hurdles.</p>
+
+                    <h5 class="text-accent mb-3 mt-4">Key Legal Points</h5>
+                    <ul class="practice-service-list position-relative ps-0" style="list-style: none;">
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Title Deed (Dalil):</strong> Ensure you have the original registered deed. A
+                            certified copy is good, but the original is paramount.
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Mutation (Namjari):</strong> Updating the Record of Rights in your name is separate
+                            from registration and equally important.
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Possession:</strong> Legally, "possession is nine-tenths of the law." Secure your
+                            physical boundary immediately after purchase.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-accent mb-3 mt-4">Practical Insight</h5>
+                    <p>Before purchasing land, always check the CS, SA, RS, and City Jorip records to ensure the chain
+                        of ownership is unbroken. A single gap in these records can lead to years of litigation.</p>
+
+                    <div class="alert alert-dark border-gold mt-4">
+                        <h6 class="text-accent mb-1"><i class="fas fa-exclamation-circle me-2"></i>Legal Advisory Note
+                        </h6>
+                        <p class="mb-0">If you receive a legal notice challenging your ownership, do not ignore it. A
+                            timely response drafted by a lawyer can often resolve the issue before it reaches court.</p>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-dark rounded border border-secondary">
+                        <small class="text-muted"><strong>Disclaimer:</strong> This article is for informational
+                            purposes only and does not constitute legal advice. Property laws are complex; consult a
+                            specialist for your case.</small>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-gold">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+                    <a href="consultation.html" class="btn btn-primary">Property Legal Help</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Family Law / Divorce -->
+    <div class="modal fade" id="blogModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content practice-modal-content">
+                <div class="modal-header border-bottom-gold">
+                    <div>
+                        <div class="badge bg-gold text-dark mb-2">Family Law</div>
+                        <h4 class="modal-title text-white">Navigating Divorce Proceedings: A Compassionate Legal Guide
+                        </h4>
+                        <div class="text-muted small mt-1">
+                            <span class="me-3"><i class="far fa-user me-1"></i> Advocate Nusrat Jahan</span>
+                            <span><i class="far fa-calendar-alt me-1"></i> January 15, 2026</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200" alt="Divorce Law"
+                        class="img-fluid rounded mb-4 w-100" style="max-height: 400px; object-fit: cover;">
+
+                    <h5 class="text-accent mb-3">Introduction</h5>
+                    <p>Divorce is emotionally taxing, but understanding the legal process can provide a sense of control
+                        and clarity. In Bangladesh, family laws vary based on religion, and knowing which rules apply to
+                        you is the first step.</p>
+
+                    <h5 class="text-accent mb-3 mt-4">Key Legal Points</h5>
+                    <ul class="practice-service-list position-relative ps-0" style="list-style: none;">
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Notice:</strong> For Muslim marriages, a mandatory notice must be sent to the
+                            Chairman/Mayor and the spouse.
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Arbitration:</strong> The law requires an arbitration council to attempt
+                            reconciliation within 90 days.
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Dower (Mahr):</strong> All unpaid dower must be settled upon divorce, regardless of
+                            who initiated it.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-accent mb-3 mt-4">Practical Insight</h5>
+                    <p>Prioritize the welfare of children. Courts increasingly favor shared parenting plans over strict
+                        custody battles, provided it serves the child's best interest. Document everything regarding
+                        financial contributions and child care.</p>
+
+                    <div class="alert alert-dark border-gold mt-4">
+                        <h6 class="text-accent mb-1"><i class="fas fa-exclamation-circle me-2"></i>Legal Advisory Note
+                        </h6>
+                        <p class="mb-0">Do not sign any "open-ended" settlement papers under pressure. Always have a
+                            lawyer review the terms of separation, especially regarding custody and alimony.</p>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-dark rounded border border-secondary">
+                        <small class="text-muted"><strong>Disclaimer:</strong> This article is for informational
+                            purposes only. Family disputes are sensitive; please consult a lawyer for personalized
+                            guidance.</small>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-gold">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+                    <a href="consultation.html" class="btn btn-primary">Family Law Advisor</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Criminal Law -->
+    <div class="modal fade" id="blogModal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content practice-modal-content">
+                <div class="modal-header border-bottom-gold">
+                    <div>
+                        <div class="badge bg-gold text-dark mb-2">Criminal Law</div>
+                        <h4 class="modal-title text-white">Your Rights When Facing Criminal Charges in Bangladesh</h4>
+                        <div class="text-muted small mt-1">
+                            <span class="me-3"><i class="far fa-user me-1"></i> Advocate Rashid Ahmed</span>
+                            <span><i class="far fa-calendar-alt me-1"></i> January 10, 2026</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200"
+                        alt="Criminal Defense" class="img-fluid rounded mb-4 w-100"
+                        style="max-height: 400px; object-fit: cover;">
+
+                    <h5 class="text-accent mb-3">Introduction</h5>
+                    <p>Facing a criminal charge is daunting. The power of the state is vast, but it is not absolute. The
+                        Constitution of Bangladesh guarantees specific rights to every accused person, ensuring a fair
+                        trial and protection from abuse.</p>
+
+                    <h5 class="text-accent mb-3 mt-4">Key Legal Points</h5>
+                    <ul class="practice-service-list position-relative ps-0" style="list-style: none;">
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Right to Counsel:</strong> You have the absolute right to consult a lawyer of your
+                            choice immediately upon arrest.
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>24-Hour Rule:</strong> Police must produce an arrested person before a magistrate
+                            within 24 hours (excluding travel time).
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Presumption of Innocence:</strong> You are innocent until proven guilty beyond a
+                            reasonable doubt.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-accent mb-3 mt-4">Practical Insight</h5>
+                    <p>If arrested, remains calm. Do not sign any statement or "confession" without your lawyer present.
+                        Exercise your right to silence regarding the specifics of the alleged crime until you have legal
+                        representation.</p>
+
+                    <div class="alert alert-dark border-gold mt-4">
+                        <h6 class="text-accent mb-1"><i class="fas fa-exclamation-circle me-2"></i>Legal Advisory Note
+                        </h6>
+                        <p class="mb-0">Legal representation at the *bail stage* is critical. A properly moved bail
+                            petition can prevent weeks or months of unnecessary pre-trial detention.</p>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-dark rounded border border-secondary">
+                        <small class="text-muted"><strong>Disclaimer:</strong> This article is for informational
+                            purposes only. If you are facing charges, contact a criminal defense attorney
+                            immediately.</small>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-gold">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+                    <a href="consultation.html" class="btn btn-primary">Urgent Legal Assistance</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Tax Law Updates -->
+    <div class="modal fade" id="blogModal5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content practice-modal-content">
+                <div class="modal-header border-bottom-gold">
+                    <div>
+                        <div class="badge bg-gold text-dark mb-2">Legal Updates</div>
+                        <h4 class="modal-title text-white">New Tax Regulations 2026: What Businesses Need to Know</h4>
+                        <div class="text-muted small mt-1">
+                            <span class="me-3"><i class="far fa-user me-1"></i> Advocate Tanvir Hassan</span>
+                            <span><i class="far fa-calendar-alt me-1"></i> January 5, 2026</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200" alt="Tax Regulations"
+                        class="img-fluid rounded mb-4 w-100" style="max-height: 400px; object-fit: cover;">
+
+                    <h5 class="text-accent mb-3">Introduction</h5>
+                    <p>The Finance Act 2026 has introduced significant changes aimed at digitizing tax compliance and
+                        widening the tax net. For businesses, this means new reporting requirements and potentially new
+                        liabilities if not managed correctly.</p>
+
+                    <h5 class="text-accent mb-3 mt-4">Key Legal Points</h5>
+                    <ul class="practice-service-list position-relative ps-0" style="list-style: none;">
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Automated VAT Audits:</strong> The NBR is implementing AI-driven audits.
+                            Discrepancies in VAT returns will be flagged instantly.
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Digital Services Tax:</strong> New withholding tax obligations for payments made to
+                            foreign software and ad services.
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Green Tax Incentives:</strong> Tax rebates are available for factories adopting
+                            eco-friendly waste management systems.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-accent mb-3 mt-4">Practical Insight</h5>
+                    <p>Review your vendor contracts, especially with foreign digital service providers, to ensure tax
+                        deduction at source is handled correctly. Implementing compliant accounting software is no
+                        longer optional; it's a necessity.</p>
+
+                    <div class="alert alert-dark border-gold mt-4">
+                        <h6 class="text-accent mb-1"><i class="fas fa-exclamation-circle me-2"></i>Legal Advisory Note
+                        </h6>
+                        <p class="mb-0">Non-compliance with the new digital reporting standards carries heavy penalties.
+                            Conduct an internal tax health check before the fiscal year-end.</p>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-dark rounded border border-secondary">
+                        <small class="text-muted"><strong>Disclaimer:</strong> This article provides a summary of recent
+                            changes. For specific tax planning, consult a tax advisor or legal expert.</small>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-gold">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+                    <a href="consultation.html" class="btn btn-primary">Tax Law Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: IP for Startups -->
+    <div class="modal fade" id="blogModal6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content practice-modal-content">
+                <div class="modal-header border-bottom-gold">
+                    <div>
+                        <div class="badge bg-gold text-dark mb-2">IP Law</div>
+                        <h4 class="modal-title text-white">Intellectual Property Protection for Startups</h4>
+                        <div class="text-muted small mt-1">
+                            <span class="me-3"><i class="far fa-user me-1"></i> Advocate Sabrina Chowdhury</span>
+                            <span><i class="far fa-calendar-alt me-1"></i> December 28, 2025</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200" alt="IP for Startups"
+                        class="img-fluid rounded mb-4 w-100" style="max-height: 400px; object-fit: cover;">
+
+                    <h5 class="text-accent mb-3">Introduction</h5>
+                    <p>For a startup, your idea is often your most valuable asset. However, in the race to launch,
+                        founders often neglect Intellectual Property (IP) protection, leaving them vulnerable to
+                        copycats and theft. Securing your IP early is essential for valuation and investment.</p>
+
+                    <h5 class="text-accent mb-3 mt-4">Key Legal Points</h5>
+                    <ul class="practice-service-list position-relative ps-0" style="list-style: none;">
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Trademark vs. Company Name:</strong> Registering your company name with RJSC does
+                            *not* give you trademark rights. You must register the brand separately.
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>NDA:</strong> Never pitch detailed technical specifications to investors or partners
+                            without a Non-Disclosure Agreement.
+                        </li>
+                        <li class="ps-4 mb-2"><i class="fas fa-caret-right text-accent position-absolute start-0"></i>
+                            <strong>Copyright:</strong> Software code and original content are automatically protected,
+                            but registration strengthens your legal standing in court.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-accent mb-3 mt-4">Practical Insight</h5>
+                    <p>Conduct a trademark search before designing your logo or printing marketing materials. Rebranding
+                        later due to infringement claims is costly and damaging to your reputation.</p>
+
+                    <div class="alert alert-dark border-gold mt-4">
+                        <h6 class="text-accent mb-1"><i class="fas fa-exclamation-circle me-2"></i>Legal Advisory Note
+                        </h6>
+                        <p class="mb-0">Ensure all employment contracts explicitly state that any IP created by
+                            employees during work hours belongs to the company, not the individual.</p>
+                    </div>
+
+                    <div class="mt-4 p-3 bg-dark rounded border border-secondary">
+                        <small class="text-muted"><strong>Disclaimer:</strong> This article is for informational
+                            purposes only. IP strategies vary by industry; consult an IP lawyer for a tailored
+                            plan.</small>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-gold">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+                    <a href="consultation.html" class="btn btn-primary">Protect Your Startup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
