@@ -148,9 +148,9 @@ const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ setCurrentPage })
   return (
     <>
       {/* Page Header */}
-      <div 
-        className="hero-wrap hero-wrap-2" 
-        style={{ 
+      <div
+        className="hero-wrap hero-wrap-2"
+        style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920')",
           minHeight: '50vh'
         }}
@@ -182,7 +182,7 @@ const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ setCurrentPage })
                 <span className="subheading">Comprehensive Legal Services</span>
                 <h2>Areas of <span className="text-accent">Practice</span></h2>
                 <p>
-                  We offer comprehensive legal services across all major practice areas, 
+                  We offer comprehensive legal services across all major practice areas,
                   providing expert counsel tailored to your specific needs.
                 </p>
               </div>
@@ -230,8 +230,8 @@ const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ setCurrentPage })
                 <h2>Expert Legal <span className="text-accent">Representation</span></h2>
               </div>
               <p>
-                Our attorneys bring decades of combined experience across all practice areas. 
-                We take a client-centered approach, ensuring personalized attention and 
+                Our attorneys bring over 18 years of experience across all practice areas.
+                We take a client-centered approach, ensuring personalized attention and
                 strategic solutions for every case.
               </p>
               <div className="row mt-4">
@@ -260,8 +260,8 @@ const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ setCurrentPage })
                   </div>
                 ))}
               </div>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="btn btn-primary mt-3"
                 onClick={(e) => { e.preventDefault(); setCurrentPage('consultation'); }}
               >
@@ -270,9 +270,9 @@ const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ setCurrentPage })
               </a>
             </div>
             <div className="col-lg-6" data-aos="fade-left">
-              <img 
-                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800" 
-                alt="Legal Team" 
+              <img
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800"
+                alt="Legal Team"
                 className="img-fluid"
                 style={{ borderRadius: '12px' }}
               />
@@ -283,8 +283,8 @@ const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ setCurrentPage })
 
       {/* Practice Area Modal */}
       {selectedArea !== null && (
-        <div 
-          className="modal fade show d-block" 
+        <div
+          className="modal fade show d-block"
           style={{ backgroundColor: 'rgba(0,0,0,0.9)' }}
           onClick={() => setSelectedArea(null)}
         >
@@ -306,9 +306,9 @@ const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ setCurrentPage })
                   </div>
                   {practiceAreas[selectedArea].title}
                 </h5>
-                <button 
-                  type="button" 
-                  className="close text-white" 
+                <button
+                  type="button"
+                  className="close text-white"
                   onClick={() => setSelectedArea(null)}
                   style={{ fontSize: '30px', opacity: 1, textShadow: 'none' }}
                 >
@@ -316,8 +316,8 @@ const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ setCurrentPage })
                 </button>
               </div>
               <div className="modal-body p-4">
-                <img 
-                  src={practiceAreas[selectedArea].image} 
+                <img
+                  src={practiceAreas[selectedArea].image}
                   alt={practiceAreas[selectedArea].title}
                   className="img-fluid mb-4"
                   style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '12px' }}
@@ -335,25 +335,25 @@ const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ setCurrentPage })
                   ))}
                 </div>
                 <div className="mt-4 d-flex flex-wrap" style={{ gap: '10px' }}>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="btn btn-primary"
-                    onClick={(e) => { 
-                      e.preventDefault(); 
+                    onClick={(e) => {
+                      e.preventDefault();
                       setSelectedArea(null);
-                      setCurrentPage('consultation'); 
+                      setCurrentPage('consultation');
                     }}
                   >
                     Schedule Consultation
                     <i className="fas fa-calendar-alt ml-2"></i>
                   </a>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="btn btn-outline-primary"
-                    onClick={(e) => { 
-                      e.preventDefault(); 
+                    onClick={(e) => {
+                      e.preventDefault();
                       setSelectedArea(null);
-                      setCurrentPage('contact'); 
+                      setCurrentPage('contact');
                     }}
                   >
                     Contact Us
@@ -366,7 +366,7 @@ const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ setCurrentPage })
       )}
 
       {/* CTA Section */}
-      <section className="ftco-section" style={{ 
+      <section className="ftco-section" style={{
         background: 'linear-gradient(135deg, rgba(175, 169, 57, 0.1) 0%, rgba(180, 136, 17, 0.1) 100%)',
         borderTop: '1px solid rgba(175, 169, 57, 0.2)',
         borderBottom: '1px solid rgba(175, 169, 57, 0.2)'
@@ -376,11 +376,11 @@ const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ setCurrentPage })
             <div className="col-lg-8 text-center">
               <h2 className="mb-4">Need Expert Legal <span className="text-accent">Advice?</span></h2>
               <p className="mb-4" style={{ fontSize: '18px' }}>
-                Our experienced attorneys are ready to assist you with any legal matter. 
+                Our experienced attorneys are ready to assist you with any legal matter.
                 Schedule a free consultation to discuss your needs.
               </p>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="btn btn-primary"
                 onClick={(e) => { e.preventDefault(); setCurrentPage('consultation'); }}
               >

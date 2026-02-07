@@ -92,16 +92,16 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
     },
   ];
 
-  const filteredCases = selectedCategory === 'all' 
-    ? caseStudies 
+  const filteredCases = selectedCategory === 'all'
+    ? caseStudies
     : caseStudies.filter(c => c.category === selectedCategory);
 
   return (
     <>
       {/* Page Header */}
-      <div 
-        className="hero-wrap hero-wrap-2" 
-        style={{ 
+      <div
+        className="hero-wrap hero-wrap-2"
+        style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920')",
           minHeight: '50vh'
         }}
@@ -133,7 +133,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
                 <span className="subheading">Proven Results</span>
                 <h2>Our Track <span className="text-accent">Record</span></h2>
                 <p>
-                  Explore our anonymized case studies showcasing our expertise and successful outcomes 
+                  Explore our anonymized case studies showcasing our expertise and successful outcomes
                   across various practice areas.
                 </p>
               </div>
@@ -163,8 +163,8 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
             {filteredCases.map((caseStudy, index) => (
               <div key={caseStudy.id} className="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="case-study-card">
-                  <div 
-                    className="img" 
+                  <div
+                    className="img"
                     style={{ backgroundImage: `url(${caseStudy.image})`, cursor: 'pointer' }}
                     onClick={() => setSelectedCase(index)}
                   >
@@ -177,7 +177,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
                       <span style={{ color: '#9CA3AF', fontSize: '13px' }}>{caseStudy.year}</span>
                     </div>
                     <h3 style={{ fontSize: '18px', marginBottom: '10px' }}>
-                      <a 
+                      <a
                         href="#"
                         onClick={(e) => { e.preventDefault(); setSelectedCase(index); }}
                         style={{ color: '#ECECEC' }}
@@ -186,8 +186,8 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
                       </a>
                     </h3>
                     <p style={{ color: '#9CA3AF', fontSize: '14px' }}>{caseStudy.summary}</p>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="result"
                       onClick={(e) => { e.preventDefault(); setSelectedCase(index); }}
                     >
@@ -210,7 +210,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
               { number: '98%', label: 'Success Rate' },
               { number: '1000+', label: 'Cases Won' },
               { number: '$100M+', label: 'Recovered for Clients' },
-              { number: '40+', label: 'Years Experience' }
+              { number: '18+', label: 'Years Experience' }
             ].map((stat, index) => (
               <div key={index} className="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="counter-wrap">
@@ -225,22 +225,22 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
 
       {/* Case Study Modal */}
       {selectedCase !== null && (
-        <div 
-          className="modal fade show d-block" 
+        <div
+          className="modal fade show d-block"
           style={{ backgroundColor: 'rgba(0,0,0,0.9)', overflowY: 'auto' }}
           onClick={() => setSelectedCase(null)}
         >
           <div className="modal-dialog modal-lg modal-dialog-centered my-5" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-content" style={{ 
-              background: '#161819', 
+            <div className="modal-content" style={{
+              background: '#161819',
               border: '1px solid rgba(175, 169, 57, 0.2)',
               borderRadius: '16px'
             }}>
               <div className="modal-header border-0 pb-0">
                 <h5 className="modal-title text-white">{filteredCases[selectedCase].title}</h5>
-                <button 
-                  type="button" 
-                  className="close text-white" 
+                <button
+                  type="button"
+                  className="close text-white"
                   onClick={() => setSelectedCase(null)}
                   style={{ fontSize: '30px', opacity: 1, textShadow: 'none' }}
                 >
@@ -248,15 +248,15 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
                 </button>
               </div>
               <div className="modal-body p-4">
-                <img 
-                  src={filteredCases[selectedCase].image} 
+                <img
+                  src={filteredCases[selectedCase].image}
                   alt={filteredCases[selectedCase].title}
                   className="img-fluid mb-4"
                   style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '12px' }}
                 />
                 <div className="mb-3 d-flex align-items-center flex-wrap" style={{ gap: '15px' }}>
-                  <span className="badge" style={{ 
-                    background: 'linear-gradient(135deg, #AFA939 0%, #B48811 100%)', 
+                  <span className="badge" style={{
+                    background: 'linear-gradient(135deg, #AFA939 0%, #B48811 100%)',
                     color: '#0F1113',
                     padding: '6px 14px',
                     borderRadius: '4px'
@@ -268,10 +268,10 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
                 <p style={{ color: '#9CA3AF', marginBottom: '25px' }}>
                   <strong style={{ color: '#ECECEC' }}>Client:</strong> {filteredCases[selectedCase].client}
                 </p>
-                
-                <div style={{ 
-                  background: 'rgba(175, 169, 57, 0.1)', 
-                  padding: '20px', 
+
+                <div style={{
+                  background: 'rgba(175, 169, 57, 0.1)',
+                  padding: '20px',
                   borderRadius: '12px',
                   borderLeft: '4px solid #AFA939',
                   marginBottom: '25px'
@@ -279,10 +279,10 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
                   <h5 style={{ color: '#AFA939', marginBottom: '15px' }}>The Challenge</h5>
                   <p style={{ margin: 0, color: '#D1D5DB' }}>{filteredCases[selectedCase].challenge}</p>
                 </div>
-                
-                <div style={{ 
-                  background: 'rgba(175, 169, 57, 0.1)', 
-                  padding: '20px', 
+
+                <div style={{
+                  background: 'rgba(175, 169, 57, 0.1)',
+                  padding: '20px',
                   borderRadius: '12px',
                   borderLeft: '4px solid #AFA939',
                   marginBottom: '25px'
@@ -290,10 +290,10 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
                   <h5 style={{ color: '#AFA939', marginBottom: '15px' }}>Our Solution</h5>
                   <p style={{ margin: 0, color: '#D1D5DB' }}>{filteredCases[selectedCase].solution}</p>
                 </div>
-                
-                <div style={{ 
-                  background: 'rgba(175, 169, 57, 0.1)', 
-                  padding: '20px', 
+
+                <div style={{
+                  background: 'rgba(175, 169, 57, 0.1)',
+                  padding: '20px',
                   borderRadius: '12px',
                   borderLeft: '4px solid #AFA939',
                   marginBottom: '25px'
@@ -301,18 +301,18 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
                   <h5 style={{ color: '#AFA939', marginBottom: '15px' }}>The Outcome</h5>
                   <p style={{ margin: 0, color: '#D1D5DB' }}>{filteredCases[selectedCase].outcome}</p>
                 </div>
-                
+
                 <hr style={{ borderColor: 'rgba(175, 169, 57, 0.15)', margin: '30px 0' }} />
-                
+
                 <div className="text-center">
                   <p className="mb-3" style={{ fontSize: '18px' }}>Have a similar case? Let us help you achieve the best outcome.</p>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="btn btn-primary"
-                    onClick={(e) => { 
-                      e.preventDefault(); 
+                    onClick={(e) => {
+                      e.preventDefault();
                       setSelectedCase(null);
-                      setCurrentPage('consultation'); 
+                      setCurrentPage('consultation');
                     }}
                   >
                     Schedule Free Consultation
@@ -326,7 +326,7 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
       )}
 
       {/* CTA Section */}
-      <section className="ftco-section" style={{ 
+      <section className="ftco-section" style={{
         background: 'linear-gradient(135deg, rgba(175, 169, 57, 0.1) 0%, rgba(180, 136, 17, 0.1) 100%)',
         borderTop: '1px solid rgba(175, 169, 57, 0.2)',
         borderBottom: '1px solid rgba(175, 169, 57, 0.2)'
@@ -336,11 +336,11 @@ const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ setCurrentPage }) => 
             <div className="col-lg-8 text-center">
               <h2 className="mb-4">Ready to Discuss Your <span className="text-accent">Case?</span></h2>
               <p className="mb-4" style={{ fontSize: '18px' }}>
-                Our experienced attorneys are ready to help you achieve the best possible outcome. 
+                Our experienced attorneys are ready to help you achieve the best possible outcome.
                 Schedule a free consultation today.
               </p>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="btn btn-primary"
                 onClick={(e) => { e.preventDefault(); setCurrentPage('consultation'); }}
               >

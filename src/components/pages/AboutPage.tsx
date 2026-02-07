@@ -10,9 +10,9 @@ const AboutPage: React.FC = () => {
   ];
 
   const milestones = [
-    { year: '1985', title: 'Foundation', desc: 'Kamal & Associates was established with a vision to provide exceptional legal services.' },
-    { year: '1995', title: 'Expansion', desc: 'Opened our second office and expanded into corporate and commercial law.' },
-    { year: '2005', title: 'Recognition', desc: 'Received our first national award for excellence in legal practice.' },
+    { year: '2008', title: 'Foundation', desc: 'Kamal & Associates was established with a vision to provide exceptional legal services.' },
+    { year: '2012', title: 'Expansion', desc: 'Opened our second office and expanded into corporate and commercial law.' },
+    { year: '2018', title: 'Recognition', desc: 'Received our first national award for excellence in legal practice.' },
     { year: '2015', title: 'Innovation', desc: 'Launched digital legal services and expanded our practice areas.' },
     { year: '2025', title: 'Leadership', desc: 'Recognized as one of the top law firms in Bangladesh.' },
   ];
@@ -46,7 +46,7 @@ const AboutPage: React.FC = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6" data-aos="fade-right">
-              <div className="about-img" style={{ 
+              <div className="about-img" style={{
                 backgroundImage: "url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800')",
                 height: '500px',
                 backgroundSize: 'cover',
@@ -62,7 +62,7 @@ const AboutPage: React.FC = () => {
                   padding: '25px 35px',
                   borderRadius: '12px'
                 }}>
-                  <h3 style={{ margin: 0, fontSize: '48px', fontWeight: 700, color: '#1a1a1a' }}>40+</h3>
+                  <h3 style={{ margin: 0, fontSize: '48px', fontWeight: 700, color: '#1a1a1a' }}>18+</h3>
                   <p style={{ margin: 0, color: '#1a1a1a', fontWeight: 600 }}>Years of Excellence</p>
                 </div>
               </div>
@@ -73,18 +73,18 @@ const AboutPage: React.FC = () => {
                 <h2 className="mb-4">Kamal & Associates: <span className="text-accent">Defender of Justice</span></h2>
               </div>
               <p>
-                Founded in 1985, Kamal & Associates has grown to become one of Bangladesh's most respected 
-                law firms. Our journey began with a simple mission: to provide accessible, high-quality legal 
+                Founded in 2008, Kamal & Associates has grown to become one of Bangladesh's most respected
+                law firms. Our journey began with a simple mission: to provide accessible, high-quality legal
                 services to those who need them most.
               </p>
               <p>
-                Over four decades, we have built a reputation for excellence, integrity, and unwavering 
-                commitment to our clients. Our team of experienced attorneys brings together diverse 
+                Since 2008, we have built a reputation for excellence, integrity, and unwavering
+                commitment to our clients. Our team of experienced attorneys brings together diverse
                 expertise across multiple practice areas, ensuring comprehensive legal solutions.
               </p>
               <p>
-                Today, we continue to uphold the values that have defined us from the beginning: a 
-                dedication to justice, a commitment to ethical practice, and a passion for helping 
+                Today, we continue to uphold the values that have defined us from the beginning: a
+                dedication to justice, a commitment to ethical practice, and a passion for helping
                 our clients achieve their goals.
               </p>
               <Link to="/consultation" className="btn btn-primary mt-4">
@@ -163,8 +163,8 @@ const AboutPage: React.FC = () => {
                 </div>
                 <h3 style={{ color: '#ECECEC', marginBottom: '20px' }}>Our Mission</h3>
                 <p style={{ color: '#9CA3AF', lineHeight: 1.8 }}>
-                  To provide exceptional legal services that empower our clients to navigate complex 
-                  legal challenges with confidence. We are committed to upholding justice, protecting 
+                  To provide exceptional legal services that empower our clients to navigate complex
+                  legal challenges with confidence. We are committed to upholding justice, protecting
                   rights, and delivering results that make a meaningful difference in people's lives.
                 </p>
               </div>
@@ -190,8 +190,8 @@ const AboutPage: React.FC = () => {
                 </div>
                 <h3 style={{ color: '#ECECEC', marginBottom: '20px' }}>Our Vision</h3>
                 <p style={{ color: '#9CA3AF', lineHeight: 1.8 }}>
-                  To be recognized as Bangladesh's most trusted and innovative law firm, setting the 
-                  standard for legal excellence and client service. We envision a future where access 
+                  To be recognized as Bangladesh's most trusted and innovative law firm, setting the
+                  standard for legal excellence and client service. We envision a future where access
                   to quality legal representation is available to all who seek justice.
                 </p>
               </div>
@@ -244,7 +244,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="ftco-section" style={{ 
+      <section className="ftco-section" style={{
         background: 'linear-gradient(135deg, rgba(175, 169, 57, 0.1) 0%, rgba(180, 136, 17, 0.1) 100%)',
         borderTop: '1px solid rgba(175, 169, 57, 0.2)'
       }}>
