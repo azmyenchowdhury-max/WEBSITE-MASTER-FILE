@@ -22,20 +22,20 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setSubmitStatus('success');
     setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-    
+
     setTimeout(() => setSubmitStatus('idle'), 5000);
   };
 
   const contactInfo = [
     { icon: 'fa-map-marker-alt', title: 'Address', content: 'House 45, Road 12, Banani\nDhaka 1213, Bangladesh' },
-    { icon: 'fa-phone-alt', title: 'Phone', content: '+880 2-9821234\n+880 1711-123456' },
+    { icon: 'fa-phone-alt', title: 'Phone', content: '+880 1713 456 800' },
     { icon: 'fa-envelope', title: 'Email', content: 'info@kamalassociates.com.bd\nlegal@kamalassociates.com.bd' },
     { icon: 'fa-clock', title: 'Office Hours', content: 'Sunday - Thursday\n9:00 AM - 6:00 PM' },
   ];
@@ -43,9 +43,9 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
   return (
     <>
       {/* Page Header */}
-      <div 
-        className="hero-wrap hero-wrap-2" 
-        style={{ 
+      <div
+        className="hero-wrap hero-wrap-2"
+        style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920')",
           minHeight: '50vh'
         }}
@@ -112,7 +112,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
                 <span className="subheading">Send Us a Message</span>
                 <h2>Get in <span className="text-accent">Touch</span></h2>
               </div>
-              
+
               {submitStatus === 'success' && (
                 <div style={{
                   background: 'rgba(175, 169, 57, 0.1)',
@@ -132,9 +132,9 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
-                      <input 
-                        type="text" 
-                        className="form-control" 
+                      <input
+                        type="text"
+                        className="form-control"
                         placeholder="Your Name *"
                         name="name"
                         value={formData.name}
@@ -145,9 +145,9 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
-                      <input 
-                        type="email" 
-                        className="form-control" 
+                      <input
+                        type="email"
+                        className="form-control"
                         placeholder="Your Email *"
                         name="email"
                         value={formData.email}
@@ -160,9 +160,9 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
-                      <input 
-                        type="tel" 
-                        className="form-control" 
+                      <input
+                        type="tel"
+                        className="form-control"
                         placeholder="Your Phone"
                         name="phone"
                         value={formData.phone}
@@ -172,7 +172,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
-                      <select 
+                      <select
                         className="form-control"
                         name="subject"
                         value={formData.subject}
@@ -193,8 +193,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
                   </div>
                 </div>
                 <div className="form-group">
-                  <textarea 
-                    className="form-control" 
+                  <textarea
+                    className="form-control"
                     placeholder="Your Message *"
                     name="message"
                     value={formData.message}
@@ -204,8 +204,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
                   ></textarea>
                 </div>
                 <div className="form-group">
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="btn btn-primary"
                     disabled={isSubmitting}
                   >
@@ -229,25 +229,25 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
                 <span className="subheading">Our Location</span>
                 <h2>Find <span className="text-accent">Us</span></h2>
               </div>
-              <div style={{ 
-                width: '100%', 
-                height: '350px', 
+              <div style={{
+                width: '100%',
+                height: '350px',
                 borderRadius: '12px',
                 overflow: 'hidden',
                 border: '1px solid rgba(175, 169, 57, 0.15)'
               }}>
-                <iframe 
+                <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.7383!2d90.4!3d23.79!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQ3JzI0LjAiTiA5MMKwMjQnMDAuMCJF!5e0!3m2!1sen!2sbd!4v1234567890"
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0, filter: 'grayscale(100%) invert(90%)' }} 
-                  allowFullScreen 
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, filter: 'grayscale(100%) invert(90%)' }}
+                  allowFullScreen
                   loading="lazy"
                   title="Office Location"
                 ></iframe>
               </div>
-              <div className="mt-4 p-4" style={{ 
-                background: '#1C1E20', 
+              <div className="mt-4 p-4" style={{
+                background: '#1C1E20',
                 borderRadius: '12px',
                 border: '1px solid rgba(175, 169, 57, 0.15)'
               }}>
@@ -260,9 +260,9 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
                     <p className="mb-0" style={{ color: '#9CA3AF' }}>For quick inquiries, reach us on WhatsApp</p>
                   </div>
                   <div className="col-md-4 text-md-right mt-3 mt-md-0">
-                    <a 
-                      href="https://wa.me/8801711123456" 
-                      target="_blank" 
+                    <a
+                      href="https://wa.me/8801711123456"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-outline-primary"
                     >
@@ -317,7 +317,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
       </section>
 
       {/* CTA Section */}
-      <section className="ftco-section" style={{ 
+      <section className="ftco-section" style={{
         background: 'linear-gradient(135deg, rgba(175, 169, 57, 0.1) 0%, rgba(180, 136, 17, 0.1) 100%)',
         borderTop: '1px solid rgba(175, 169, 57, 0.2)',
         borderBottom: '1px solid rgba(175, 169, 57, 0.2)'
@@ -329,8 +329,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ setCurrentPage }) => {
               <p className="mb-4" style={{ fontSize: '18px' }}>
                 Schedule a free consultation with our expert attorneys today.
               </p>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="btn btn-primary"
                 onClick={(e) => { e.preventDefault(); setCurrentPage('consultation'); }}
               >
